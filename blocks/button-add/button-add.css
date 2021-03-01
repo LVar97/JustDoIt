@@ -1,0 +1,18 @@
+.button-add{
+	width: 58px;
+	min-height: 58px;
+	background-color: #5B3E96;
+	background-image: url('../../image/pluss.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 50%;
+	border: none;
+
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+
+	position: absolute;
+	top: -29px;
+	left: 43%;
+}

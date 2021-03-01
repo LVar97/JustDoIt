@@ -1,0 +1,17 @@
+@import url('../vendor/normalize.css');
+@import url('../blocks/page/page.css');
+@import url('../blocks/header/header.css');
+@import url('../blocks/header/__logo/header__logo.css');
+@import url('../blocks/header/__btn/header__btn.css');
+@import url('../blocks/switch/switch.css');
+@import url('../blocks/switch/_active/switch_active.css');
+
+@import url('../blocks/footer/footer.css');
+@import url('../blocks/button-add/button-add.css');
+@import url('../blocks/menu/menu.css');
+@import url('../blocks/menu/__icons/menu__icons.css');
+@import url('../blocks/menu/__img/menu__img.css');
+
+@import url('');
+@import url('');
+@import url('');
