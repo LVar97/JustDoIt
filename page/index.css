@@ -36,3 +36,22 @@
 @import url('../blocks/menu/menu.css');
 @import url('../blocks/menu/__icons/menu__icons.css');
 @import url('../blocks/menu/__img/menu__img.css');
+
+/* popup completed */
+
+@import url('../blocks/popup/popup.css');
+@import url('../blocks/popup/_opened/popup_opened.css');
+@import url('../blocks/popup/__container/popup__container.css');
+@import url('../blocks/popup/__title/popup__title.css');
+@import url('../blocks/popup/__note/popup__note.css');
+
+@import url('../blocks/completed/completed.css');
+@import url('../blocks/completed/__info/completed__info.css');
+@import url('../blocks/completed/__input/completed__input.css');
+@import url('../blocks/completed/__label/completed__label.css');
+
+@import url('../blocks/button-delete/button-delete.css');
+
+/*  */
+
+
