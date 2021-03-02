@@ -1,0 +1,12 @@
+.popup-new__label {
+
+    font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.21;
+    text-align: left;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}

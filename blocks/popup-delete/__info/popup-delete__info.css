@@ -1,10 +1,10 @@
-.completed__info{
-	max-width: 164px;
+.popup-delete__info {
+
+    max-width: 164px;
 	min-height: 48px;
 	background-image: url('../../../image/date-icon.svg');
 	background-repeat: no-repeat;
 	margin-left: 20px;
 
 	background-position-y: center;
-
 }

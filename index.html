@@ -51,11 +51,8 @@
         </div>
       </section>
 =======
+<!--
     <main class="content">
-      <section class="calendar">
-
-      </section>
-
       <section class="notes">
         <h2 class="notes__title">10 марта</h2>
         <ul class="notes__list">
@@ -68,6 +65,7 @@
         </ul>
       </section>    
     </main>
+  -->
     <footer class="footer">
       <button class="button-add"></button>
       <div class="menu">
@@ -87,19 +85,43 @@
     </footer>
 	</div>
 
-  <div class="popup completed">
-    <div class="popup__container">
-      <h2 class="popup__title">Встретить Васю</h2>
-      <div class="completed__info"></div>
-      <p class="popup__note">Приезжает на Ленинский вокзал, 4 платформа. Просил купить ему поесть</p>     
-      <label for="done" class="completed__label">
-        <input id="done" type="checkbox" checked class="completed__input">
+  <div class="popup popup-delete">
+    <div class="popup-delete__container">
+      <h2 class="popup-delete__title">Встретить Васю</h2>
+      <div class="popup-delete__info"></div>
+      <p class="popup-delete__note">Приезжает на Ленинский вокзал, 4 платформа. Просил купить ему поесть</p>     
+      <label for="done" class="popup-delete__label">
+        <input id="done" type="checkbox" checked class="popup-delete__input">
         <span>выполнено</span>
       </label>
       <button type="button" class="button-delete">
         <img src="image/delete-icon.svg" alt="удалить">
         Удалить
       </button>
+    </div>
+  </div>
+  <div class="popup popup-new popup_opened">
+    <div class="popup-new__container">
+      <h2 class="popup-new__title">Создать новое задание</h2>
+      <form class="popup-new__form">
+        <label class="popup-new__label">Название
+          <input class="popup-new__input" required>
+        </label>
+        <label class="popup-new__label">Описание
+          <input class="popup-new__input" required>
+        </label>
+  
+        <input class="popup-new__input" type="date" id="" required>
+  
+        <label class="popup-new__label">Уведомление
+          <input class="popup-new__input" required>
+        </label>
+        <label class="popup-new__label">Выбор цвета
+          <input class="popup-new__input popup-new__input_hidden" id="color" type="color" required>
+          <span class="popup-new__color"></span>
+        </label>
+      </form>
+      <button class="popup-new__add-btn" type="submit">Добавить</button>
     </div>
   </div>
 </body>

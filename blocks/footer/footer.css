@@ -1,6 +1,8 @@
 .footer{
 	max-width: 375px;
 	min-height: 64px;
-	background-color: rgba(239, 245, 248, 0.822);
-	position: relative;
+	background: rgba(239, 245, 248, 0.827983);
+	backdrop-filter: blur(24.0353px);
+	position: sticky;
+    bottom: 0;
 }

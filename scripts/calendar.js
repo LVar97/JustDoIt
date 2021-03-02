@@ -14,6 +14,17 @@ const monthNames = [
     'Декабрь'
 ];
 
+const colorInput = document.querySelector('#color');
+const pseudoColor = document.querySelector('.popup-new__color');
+
+//Инпут выбора цвета
+
+colorInput.onchange = function() {
+
+  pseudoColor.style.backgroundColor = colorInput.value;
+}
+
+
 function createCalendar(elem, year, month) {
 
   let mon = month - 1; // месяцы в JS идут от 0 до 11, а не от 1 до 12
@@ -64,5 +75,8 @@ function getDay(date) { // получить номер дня недели, от
   return day - 1;
 }
 
+
+
+console.log(pseudoColor.style.backgroundColor)
 
 createCalendar(calendar, 2012, 9);

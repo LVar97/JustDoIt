@@ -15,7 +15,7 @@
 
 	color: #FFFFFF;
 	margin-top: 29px;
-	border-radius: 10px;
+	border-radius: 0 0 10px 10px;
 	transition: background-color 1s ease;
 }
 
