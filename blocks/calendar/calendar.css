@@ -1,0 +1,9 @@
+.calendar {
+    
+    background-color: #140A26;
+    min-height: 200px;
+    min-width: 320px;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 0;
+}
