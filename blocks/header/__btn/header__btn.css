@@ -1,0 +1,7 @@
+.header__btn{
+	display: flex;
+	width: 285px;
+	min-height: 50px;
+	background-color: #fff;
+	border-radius: 100px;
+}
