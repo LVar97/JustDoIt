@@ -1,0 +1,27 @@
+.calendar__week {
+
+    font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.21;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+
+}
+
+
+
+/*
+.calendar__week::after {
+    content: '';
+    display: block;
+    background-color: white;
+    width: 100%;
+    height: 2px; 
+}
+
+*/
