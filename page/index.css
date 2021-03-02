@@ -7,6 +7,10 @@
 
 @import url(../vendor/normalize.css);
 
+/* root & content */
+
+@import url('../blocks/root/root.css');
+@import url('../blocks/content/content.css');
 
 /*Root*/
 
@@ -46,12 +50,37 @@
 
 /*Footer*/
 
-@import url(../blocks/footer/footer.css);
-@import url(../blocks/button-add/button-add.css);
-@import url(../blocks/menu/menu.css);
-@import url(../blocks/menu/__icons/menu__icons.css);
-@import url(../blocks/menu/__img/menu__img.css);
+@import url('../blocks/footer/footer.css');
+@import url('../blocks/button-add/button-add.css');
+@import url('../blocks/menu/menu.css');
+@import url('../blocks/menu/__icons/menu__icons.css');
+@import url('../blocks/menu/__img/menu__img.css');
 
-@import url();
-@import url();
-@import url();
+/* popup completed */
+
+@import url('../blocks/popup/popup.css');
+@import url('../blocks/popup/_opened/popup_opened.css');
+@import url('../blocks/popup/__container/popup__container.css');
+@import url('../blocks/popup/__title/popup__title.css');
+@import url('../blocks/popup/__note/popup__note.css');
+
+@import url('../blocks/completed/completed.css');
+@import url('../blocks/completed/__info/completed__info.css');
+@import url('../blocks/completed/__input/completed__input.css');
+@import url('../blocks/completed/__label/completed__label.css');
+
+@import url('../blocks/button-delete/button-delete.css');
+
+/* notes */
+
+@import url('../blocks/notes/notes.css');
+@import url('../blocks/notes/__title/notes__title.css');
+@import url('../blocks/notes/__list/notes__list.css');
+@import url('../blocks/notes/__details/notes__details.css');
+@import url('../blocks/card/card.css');
+@import url('../blocks/card/__label/card__label.css');
+@import url('../blocks/card/__input/card__input.css');
+
+@import url('../blocks/button-delete/_small/button-delete_small.css');
+@import url('');
+@import url('');

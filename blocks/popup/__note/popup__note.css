@@ -1,0 +1,16 @@
+.popup__note{
+	max-width: 295px;
+	min-height: 60px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	/* or 143% */
+
+	display: flex;
+	align-items: center;
+	text-align: justify;
+
+	color: #050505;
+	margin: 0 auto;
+	padding: 15px 0 26px;
+}
