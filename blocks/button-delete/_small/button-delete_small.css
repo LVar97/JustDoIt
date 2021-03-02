@@ -1,0 +1,6 @@
+.button-delete_small{
+	background-image: url('../../../image/del-small.svg');
+	background-repeat: no-repeat;
+	background-color: #fff;
+	border: none;
+}

@@ -52,6 +52,16 @@
 
 @import url('../blocks/button-delete/button-delete.css');
 
-/*  */
+/* notes */
 
+@import url('../blocks/notes/notes.css');
+@import url('../blocks/notes/__title/notes__title.css');
+@import url('../blocks/notes/__list/notes__list.css');
+@import url('../blocks/notes/__details/notes__details.css');
+@import url('../blocks/card/card.css');
+@import url('../blocks/card/__label/card__label.css');
+@import url('../blocks/card/__input/card__input.css');
 
+@import url('../blocks/button-delete/_small/button-delete_small.css');
+@import url('');
+@import url('');
