@@ -1,0 +1,7 @@
+.month-tasks__cards-case {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

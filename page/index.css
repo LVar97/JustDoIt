@@ -12,13 +12,18 @@
 @import url('../blocks/root/root.css');
 @import url('../blocks/content/content.css');
 
+/*Root*/
+
+@import url(../blocks/root/root.css);
+
+
 /*Header*/
 
-@import url('../blocks/header/header.css');
-@import url('../blocks/header/__logo/header__logo.css');
-@import url('../blocks/header/__btn/header__btn.css');
-@import url('../blocks/switch/switch.css');
-@import url('../blocks/switch/_active/switch_active.css');
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__btn/header__btn.css);
+@import url(../blocks/switch/switch.css);
+@import url(../blocks/switch/_active/switch_active.css);
 
 
 /*Calendar*/
@@ -27,6 +32,20 @@
 @import url(../blocks/calendar/__table/calendar__table.css);
 @import url(../blocks/calendar/__week/calendar__week.css);
 @import url(../blocks/calendar/__day/calendar__day.css);
+@import url(../blocks/calendar/__year-title/calendar__year-title.css);
+@import url(../blocks/calendar/__month-title/calendar__month-title.css);
+
+
+/*Month-tasks*/
+
+@import url(../blocks/month-tasks/month-tasks.css);
+@import url(../blocks/month-tasks/__month-title/month-tasks__month-title.css);
+@import url(../blocks/month-tasks/__task-card/month-tasks__task-card.css);
+@import url(../blocks/month-tasks/__heading/month-tasks__heading.css);
+@import url(../blocks/month-tasks/__done-icon/month-tasks__done-icon.css);
+@import url(../blocks/month-tasks/__data/month-tasks__data.css);
+@import url(../blocks/month-tasks/__time/month-tasks__time.css);
+@import url(../blocks/month-tasks/__cards-case/month-tasks__cards-case.css);
 
 
 /*Footer*/

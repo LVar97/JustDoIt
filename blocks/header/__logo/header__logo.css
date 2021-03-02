@@ -1,4 +1,7 @@
 .header__logo{
-	padding: 43px 0 20px;
-	margin: 0 auto;
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.0//EN' 'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'%3E%3Csvg xmlns='http://www.w3.org/2000/svg' width='47px' height='15px' version='1.0' viewBox='0 0 3174.98 1058.3' shape-rendering='geometricPrecision' text-rendering='geometricPrecision' image-rendering='optimizeQuality' fill-rule='evenodd' clip-rule='evenodd'%3E%3Cpath d='M2330.09 657.07c216.33-.67 320.99 4.74 320.99-166.75S2541.67 325 2329.85 324.98l.24 332.09z' fill='transparent'/%3E%3Cpath d='M26.51 467.56V3.72h930.23v463.84h-233.2v583H259.71v-583H26.51zm980.8 0V3.72h930.23v463.84h-233.2v583h-463.83v-583h-233.2zM2067.03 3.72h515.34c185.44 0 328.97 51.27 429.88 154.05 101.15 102.57 151.73 226.42 151.73 371.34 0 92.49-22.97 179.61-69.09 261.77-45.9 82.2-113.07 145.89-201.81 191.32-88.77 45.66-195.99 68.36-321.73 68.36h-504.32V3.72zm463.1 400.62v245.6h11.72c55.72 0 96-9.59 121.06-29.03 24.82-19.42 37.23-51.51 37.23-95.78 0-80.54-46.82-120.79-140.51-120.79h-29.5z' fill='white' fill-rule='nonzero'/%3E%3C/svg%3E");
+	width: 47px;
+    height: 15px;
+    background-size: cover;
+    margin: 87px auto 19px;
 }

@@ -1,0 +1,10 @@
+.month-tasks__task-card {
+
+    background-color: white;
+    display: flex;
+    width: 280px;
+    height: 48px;
+    box-shadow: 0px 10px 20px rgb(0 0 0 / 4%);
+    border-radius: 3px;
+    margin-bottom: 11px;
+}

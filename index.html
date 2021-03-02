@@ -11,29 +11,62 @@
 <body>
 	<div class="root">
     <header class="header">
-      <img src="image/logo.png" alt="logo" class="header__logo">
+      <div alt="logo" class="header__logo"></div>
       <div class="header__btn">
         <button class="switch switch_active">Месяц</button>
         <button class="switch">Мероприятия</button>
       </div>
     </header>
+    <main>
+      <section class="calendar">
+      </section>
+
+      <section class="month-tasks">
+        <h2 class="month-tasks__month-title">Этот месяц</h2>
+        <div class="month-tasks__cards-case">
+          <div class="month-tasks__task-card">
+            <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
+            <p class="month-tasks__heading">Название карточки</p>
+            <p class="month-tasks__data">12 окт</p>
+            <p class="month-tasks__time">13:00</p>
+          </div>
+          <div class="month-tasks__task-card">
+            <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
+            <p class="month-tasks__heading">Название карточки</p>
+            <p class="month-tasks__data">12 окт</p>
+            <p class="month-tasks__time">13:00</p>
+          </div>
+          <div class="month-tasks__task-card">
+            <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
+            <p class="month-tasks__heading">Название карточки</p>
+            <p class="month-tasks__data">12 окт</p>
+            <p class="month-tasks__time">13:00</p>
+          </div>
+          <div class="month-tasks__task-card">
+            <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
+            <p class="month-tasks__heading">Название карточки</p>
+            <p class="month-tasks__data">12 окт</p>
+            <p class="month-tasks__time">13:00</p>
+          </div>
+        </div>
+      </section>
+=======
     <main class="content">
-    <section class="calendar">
-    
-    </section>
+      <section class="calendar">
 
-  <section class="notes">
-    <h2 class="notes__title">10 марта</h2>
-    <ul class="notes__list">
-      <li class="card">
-        <input type="radio" name="tab" id="tab-1" class="card__input">
-        <label for="tab-1" class="card__label">Покормить кота</label>
-        <a href="#" class="notes__details">Подробнее</a>
-        <button type="button" class="button-delete_small"></button>
-      </li>
-    </ul>
-  </section>    
+      </section>
 
+      <section class="notes">
+        <h2 class="notes__title">10 марта</h2>
+        <ul class="notes__list">
+          <li class="card">
+            <input type="radio" name="tab" id="tab-1" class="card__input">
+            <label for="tab-1" class="card__label">Покормить кота</label>
+            <a href="#" class="notes__details">Подробнее</a>
+            <button type="button" class="button-delete_small"></button>
+          </li>
+        </ul>
+      </section>    
     </main>
     <footer class="footer">
       <button class="button-add"></button>
