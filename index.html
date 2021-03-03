@@ -27,7 +27,7 @@
         <section class="month-tasks">
           <h2 class="month-tasks__month-title">Этот месяц</h2>
           <div class="month-tasks__cards-case">
-            <div class="month-tasks__task-card">
+            <!-- <div class="month-tasks__task-card">
               <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
               <p class="month-tasks__heading">Название карточки</p>
               <p class="month-tasks__data">12 окт</p>
@@ -54,7 +54,7 @@
               <p class="month-tasks__data">12 окт</p>
               <span class="временный спан">&bull;</span>
               <p class="month-tasks__time">13:00</p>
-            </div>
+            </div> -->
           </div>
         </section>
       </section>
@@ -122,9 +122,13 @@
      <!--У всех попапов общий класс popup. Открываем попапы добавлением класса popup_opened-->
      <div class="popup popup-delete">
       <div class="popup-delete__container">
-        <h2 class="popup-delete__title">Встретить Васю</h2>
-        <div class="popup-delete__info"></div>
-        <p class="popup-delete__note">Приезжает на Ленинский вокзал, 4 платформа. Просил купить ему поесть</p>     
+        <h2 class="popup-delete__title"></h2>
+        <div class="popup-delete__info">
+          <p class="popup-delete__info_date"></p>
+          <span class="временный спан">&bull;</span>
+          <p class="popup-delete__info_time"></p>
+        </div>
+        <p class="popup-delete__note"></p>     
         <label for="done" class="popup-delete__label">
           <input id="done" type="checkbox" checked class="popup-delete__input">
           <span>выполнено</span>
@@ -142,12 +146,12 @@
         <h2 class="popup-new__title">Создать новое задание</h2>
         <form class="popup-new__form">
           <label class="popup-new__label">Название
-            <input class="popup-new__input" placeholder="Введите название" required>
+            <input class="popup-new__input" id="input-1" placeholder="Введите название" required>
           </label>
           <label class="popup-new__label">Описание
-            <input class="popup-new__input" placeholder="Введите описание" required>
+            <input class="popup-new__input" id="input-2" placeholder="Введите описание" required>
           </label>      
-          <input class="popup-new__input" type="date" id="" required>
+          <input class="popup-new__input" type="date" id="input-3" required>
           <label class="popup-new__label">Уведомить за
             <select class="popup-new__input" placeholder="Уведомить за 5 мин" required>
               <option>1 мин</option>
@@ -164,7 +168,16 @@
         </form>
       </div>
     </div>
-    
+
+    <template id="card">
+      <div class="month-tasks__task-card">
+        <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
+        <p class="month-tasks__heading"></p>
+        <p class="month-tasks__data"></p>
+        <span class="временный спан">&bull;</span>
+        <p class="month-tasks__time"></p>
+      </div>
+    </template> 
   </div>
   <script src="./scripts/popups.js"></script>
 </body>

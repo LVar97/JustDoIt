@@ -1,6 +1,7 @@
 .popup-new__form {
-
+    max-width: 282px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0 auto;
 }

@@ -87,6 +87,8 @@
 @import url(../blocks/popup-delete/__title/popup-delete__title.css);
 @import url(../blocks/popup-delete/__note/popup-delete__note.css);
 @import url(../blocks/popup-delete/__info/popup-delete__info.css);
+@import url('../blocks/popup-delete/__info/_date/popup-delete__info_date.css');
+@import url('../blocks/popup-delete/__info/_time/popup-delete__info_time.css');
 @import url(../blocks/popup-delete/__input/popup-delete__input.css);
 @import url(../blocks/popup-delete/__label/popup-delete__label.css);
 
@@ -102,6 +104,7 @@
 @import url(../blocks/popup-new/__title/popup-new__title.css);
 @import url(../blocks/popup-new/__form/popup-new__form.css);
 @import url(../blocks/popup-new/__add-btn/popup-new__add-btn.css);
+@import url('../blocks/popup-new/__add-btn/_disabled/popup-new__add-btn_disabled.css');
 @import url(../blocks/popup-new/__color/popup-new__color.css);
 @import url(../blocks/popup-new/__input/_hidden/popup-new__input_hidden.css);
 

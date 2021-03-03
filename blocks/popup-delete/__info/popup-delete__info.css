@@ -1,10 +1,11 @@
 .popup-delete__info {
-
-    max-width: 164px;
+	display: flex;
+  max-width: 134px;
 	min-height: 48px;
 	background-image: url('../../../image/date-icon.svg');
 	background-repeat: no-repeat;
 	margin-left: 20px;
-
+	align-items: center;
+	justify-content: space-around;
 	background-position-y: center;
 }
