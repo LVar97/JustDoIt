@@ -105,16 +105,4 @@
 @import url(../blocks/popup-new/__color/popup-new__color.css);
 @import url(../blocks/popup-new/__input/_hidden/popup-new__input_hidden.css);
 
-
-/* notes */
-
-@import url('../blocks/notes/notes.css');
-@import url('../blocks/notes/__title/notes__title.css');
-@import url('../blocks/notes/__list/notes__list.css');
-@import url('../blocks/notes/__details/notes__details.css');
-@import url('../blocks/card/card.css');
-@import url('../blocks/card/__label/card__label.css');
-@import url('../blocks/card/__input/card__input.css');
-
-@import url('../blocks/button-delete/_small/button-delete_small.css');
 @import url('');

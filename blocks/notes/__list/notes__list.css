@@ -1,8 +1,0 @@
-.notes__list{
-	width: 280px;
-	overflow: hidden;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	padding: 0;
-}
