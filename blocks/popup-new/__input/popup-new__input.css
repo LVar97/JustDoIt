@@ -1,8 +1,14 @@
 .popup-new__input {
 
+    font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.21;
+    color: black;
     mix-blend-mode: normal;
-    opacity: 0.55;
     border: none;
-    border-bottom: 1px solid #979797;
-    margin-bottom: 45px;
+    border-bottom: 1px solid rgba(97, 97, 97, 0.5);
+    margin: 11px 0 45px;
+    padding-bottom: 6px;
 }

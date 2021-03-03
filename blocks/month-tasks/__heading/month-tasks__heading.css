@@ -1,4 +1,14 @@
 .month-tasks__heading {
 
-    
+    font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.21;
+    margin: 0;
+    padding: 0;
+    max-width: 98px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }

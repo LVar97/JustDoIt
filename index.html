@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./page/index.css">
 	<script src="./scripts/calendar.js" defer></script>
+  <script src="./scripts/monthly-daily.js" defer></script>
 	<title>JustDoIt</title>
 </head>
 <body>
@@ -13,116 +14,167 @@
     <header class="header">
       <div alt="logo" class="header__logo"></div>
       <div class="header__btn">
-        <button class="switch switch_active">Месяц</button>
-        <button class="switch">Мероприятия</button>
+        <button class="switch switch_active" data-tab="monthly">Месяц</button>
+        <button class="switch" data-tab="daily">День</button>
       </div>
     </header>
     <main>
-      <section class="calendar">
+      <section class="tab-content tab-content_active" data-tab-content="monthly">
+        <section class="calendar">
+        </section>
+  
+        <section class="month-tasks">
+          <h2 class="month-tasks__month-title">Этот месяц</h2>
+          <div class="month-tasks__cards-case">
+            <div class="month-tasks__task-card">
+              <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
+              <p class="month-tasks__heading">Название карточки</p>
+              <p class="month-tasks__data">12 окт</p>
+              <span class="временный спан">&bull;</span>
+              <p class="month-tasks__time">13:00</p>
+            </div>
+            <div class="month-tasks__task-card">
+              <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
+              <p class="month-tasks__heading">Название карточки</p>
+              <p class="month-tasks__data">12 окт</p>
+              <span class="временный спан">&bull;</span>
+              <p class="month-tasks__time">13:00</p>
+            </div>
+            <div class="month-tasks__task-card">
+              <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
+              <p class="month-tasks__heading">Название карточки</p>
+              <p class="month-tasks__data">12 окт</p>
+              <span class="временный спан">&bull;</span>
+              <p class="month-tasks__time">13:00</p>
+            </div>
+            <div class="month-tasks__task-card">
+              <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
+              <p class="month-tasks__heading">Название карточки</p>
+              <p class="month-tasks__data">12 окт</p>
+              <span class="временный спан">&bull;</span>
+              <p class="month-tasks__time">13:00</p>
+            </div>
+          </div>
+        </section>
       </section>
-
-      <section class="month-tasks">
-        <h2 class="month-tasks__month-title">Этот месяц</h2>
-        <div class="month-tasks__cards-case">
-          <div class="month-tasks__task-card">
-            <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
-            <p class="month-tasks__heading">Название карточки</p>
-            <p class="month-tasks__data">12 окт</p>
-            <p class="month-tasks__time">13:00</p>
+      <section class="tab-content" data-tab-content="daily" >  
+        <section class="daily-tasks">
+          <h2 class="daily-tasks__title">4 Марта 2001</h2>
+          <div class="daily-tasks__cards-case">
+            <div class="daily-tasks__task-card">
+              <p class="daily-tasks__heading">Название карточки</p>
+              <p class="daily-tasks__time">13:00</p>
+            </div>
           </div>
-          <div class="month-tasks__task-card">
-            <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
-            <p class="month-tasks__heading">Название карточки</p>
-            <p class="month-tasks__data">12 окт</p>
-            <p class="month-tasks__time">13:00</p>
+          
+          <!--Меняем размер карточки добавлением класса daily-tasks__task-card_done-->
+          <div class="daily-tasks__cards-case">
+            <div class="daily-tasks__task-card daily-tasks__task-card_done">
+              <img src="./image/done-icon.svg" alt="done-icon" class="daily-tasks__done-icon">
+              <p class="daily-tasks__heading">Название карточки</p>
+              <p class="daily-tasks__time">13:00</p>
+            </div>
           </div>
-          <div class="month-tasks__task-card">
-            <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
-            <p class="month-tasks__heading">Название карточки</p>
-            <p class="month-tasks__data">12 окт</p>
-            <p class="month-tasks__time">13:00</p>
+          <div class="daily-tasks__cards-case">
+            <div class="daily-tasks__task-card">
+              <p class="daily-tasks__heading">Название карточки</p>
+              <p class="daily-tasks__time">13:00</p>
+            </div>
           </div>
-          <div class="month-tasks__task-card">
-            <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
-            <p class="month-tasks__heading">Название карточки</p>
-            <p class="month-tasks__data">12 окт</p>
-            <p class="month-tasks__time">13:00</p>
+          <div class="daily-tasks__cards-case">
+            <div class="daily-tasks__task-card daily-tasks__task-card_done">
+              <img src="./image/done-icon.svg" alt="done-icon" class="daily-tasks__done-icon">
+              <p class="daily-tasks__heading">Название карточки</p>
+              <p class="daily-tasks__time">13:00</p>
+            </div>
           </div>
+          <div class="daily-tasks__cards-case">
+            <div class="daily-tasks__task-card">
+              <p class="daily-tasks__heading">Название карточки</p>
+              <p class="daily-tasks__time">13:00</p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!--
+          <main class="content">
+            <section class="notes">
+              <h2 class="notes__title">10 марта</h2>
+              <ul class="notes__list">
+                <li class="card">
+                  <input type="radio" name="tab" id="tab-1" class="card__input">
+                  <label for="tab-1" class="card__label">Покормить кота</label>
+                  <a href="#" class="notes__details">Подробнее</a>
+                  <button type="button" class="button-delete_small"></button>
+                </li>
+              </ul>
+            </section>    
+          </main>
+        -->
+      <footer class="footer">
+        <button class="button-add"></button>
+        <div class="menu">
+          <a class="menu__icons">
+            <img src="image/List-icons.svg" alt="#" class="menu__img">
+          </a>
+          <a class="menu__icons">
+            <img src="image/clock-icons.svg" alt="#" class="menu__img">
+          </a>
+          <a href="#" lass="menu__icons">
+            <img src="image/Bell-icons.svg" alt="#" class="menu__img">
+          </a>
+          <a href="#" lass="menu__icons">
+            <img src="image/User-icons.svg" alt="#" class="menu__img">
+          </a>
         </div>
-      </section>
-=======
-<!--
-    <main class="content">
-      <section class="notes">
-        <h2 class="notes__title">10 марта</h2>
-        <ul class="notes__list">
-          <li class="card">
-            <input type="radio" name="tab" id="tab-1" class="card__input">
-            <label for="tab-1" class="card__label">Покормить кота</label>
-            <a href="#" class="notes__details">Подробнее</a>
-            <button type="button" class="button-delete_small"></button>
-          </li>
-        </ul>
-      </section>    
-    </main>
-  -->
-    <footer class="footer">
-      <button class="button-add"></button>
-      <div class="menu">
-        <a class="menu__icons">
-          <img src="image/List-icons.svg" alt="#" class="menu__img">
-        </a>
-        <a class="menu__icons">
-          <img src="image/clock-icons.svg" alt="#" class="menu__img">
-        </a>
-        <a href="#" lass="menu__icons">
-          <img src="image/Bell-icons.svg" alt="#" class="menu__img">
-        </a>
-        <a href="#" lass="menu__icons">
-          <img src="image/User-icons.svg" alt="#" class="menu__img">
-        </a>
+      </footer>
+      
+      <!--У всех попапов общий класс popup. Открываем попапы добавлением класса popup_opened-->
+      <div class="popup popup-delete">
+        <div class="popup-delete__container">
+          <h2 class="popup-delete__title">Встретить Васю</h2>
+          <div class="popup-delete__info"></div>
+          <p class="popup-delete__note">Приезжает на Ленинский вокзал, 4 платформа. Просил купить ему поесть</p>     
+          <label for="done" class="popup-delete__label">
+            <input id="done" type="checkbox" checked class="popup-delete__input">
+            <span>выполнено</span>
+          </label>
+          <button type="button" class="button-delete">
+            <img src="image/delete-icon.svg" alt="удалить">
+            Удалить
+          </button>
+        </div>
       </div>
-    </footer>
-	</div>
 
-  <div class="popup popup-delete">
-    <div class="popup-delete__container">
-      <h2 class="popup-delete__title">Встретить Васю</h2>
-      <div class="popup-delete__info"></div>
-      <p class="popup-delete__note">Приезжает на Ленинский вокзал, 4 платформа. Просил купить ему поесть</p>     
-      <label for="done" class="popup-delete__label">
-        <input id="done" type="checkbox" checked class="popup-delete__input">
-        <span>выполнено</span>
-      </label>
-      <button type="button" class="button-delete">
-        <img src="image/delete-icon.svg" alt="удалить">
-        Удалить
-      </button>
-    </div>
-  </div>
-  <div class="popup popup-new popup_opened">
-    <div class="popup-new__container">
-      <h2 class="popup-new__title">Создать новое задание</h2>
-      <form class="popup-new__form">
-        <label class="popup-new__label">Название
-          <input class="popup-new__input" required>
-        </label>
-        <label class="popup-new__label">Описание
-          <input class="popup-new__input" required>
-        </label>
-  
-        <input class="popup-new__input" type="date" id="" required>
-  
-        <label class="popup-new__label">Уведомление
-          <input class="popup-new__input" required>
-        </label>
-        <label class="popup-new__label">Выбор цвета
-          <input class="popup-new__input popup-new__input_hidden" id="color" type="color" required>
-          <span class="popup-new__color"></span>
-        </label>
-      </form>
-      <button class="popup-new__add-btn" type="submit">Добавить</button>
-    </div>
+      <!--У всех попапов общий класс popup. Открываем попапы добавлением класса popup_opened-->
+      <div class="popup popup-new">
+        <div class="popup-new__container">
+          <h2 class="popup-new__title">Создать новое задание</h2>
+          <form class="popup-new__form">
+            <label class="popup-new__label">Название
+              <input class="popup-new__input" placeholder="Введите название" required>
+            </label>
+            <label class="popup-new__label">Описание
+              <input class="popup-new__input" placeholder="Введите описание" required>
+            </label>      
+            <input class="popup-new__input" type="date" id="" required>
+            <label class="popup-new__label">Уведомить за
+              <select class="popup-new__input" placeholder="Уведомить за 5 мин" required>
+                <option>1 мин</option>
+                <option>5 мин</option>
+                <option>15 мин</option>
+                <option>1 час</option>
+              </select>
+            </label>
+            <label class="popup-new__label">Выбор цвета
+              <input class="popup-new__input popup-new__input_hidden" id="color" type="color" required>
+              <span class="popup-new__color"></span>
+            </label>
+            <button class="popup-new__add-btn" type="submit">Добавить</button>
+          </form>
+        </div>
+      </div>
+    </main>
   </div>
 </body>
 </html>

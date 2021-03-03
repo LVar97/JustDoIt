@@ -26,6 +26,12 @@
 @import url(../blocks/switch/_active/switch_active.css);
 
 
+/*Tab-content*/
+
+@import url(../blocks/tab-content/tab-content.css);
+@import url(../blocks/tab-content/_active/tab-content_active.css);
+
+
 /*Calendar*/
 
 @import url(../blocks/calendar/calendar.css);
@@ -46,6 +52,18 @@
 @import url(../blocks/month-tasks/__data/month-tasks__data.css);
 @import url(../blocks/month-tasks/__time/month-tasks__time.css);
 @import url(../blocks/month-tasks/__cards-case/month-tasks__cards-case.css);
+
+
+/*Daily-tasks*/
+
+@import url(../blocks/daily-tasks/daily-tasks.css);
+@import url(../blocks/daily-tasks/__cards-case/daily-tasks__cards-case.css);
+@import url(../blocks/daily-tasks/__done-icon/daily-tasks__done-icon.css);
+@import url(../blocks/daily-tasks/__heading/daily-tasks__heading.css);
+@import url(../blocks/daily-tasks/__task-card/daily-tasks__task-card.css);
+@import url(../blocks/daily-tasks/__time/daily-tasks__time.css);
+@import url(../blocks/daily-tasks/__title/daily-tasks__title.css);
+@import url(../blocks/daily-tasks/__task-card/_done/daily-tasks__task-card_done.css);
 
 
 /*Footer*/

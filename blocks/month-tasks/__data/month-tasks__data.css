@@ -1,4 +1,12 @@
 .month-tasks__data {
 
-    
+    font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.21;
+    margin: 0;
+    margin-left: 28px;
+    margin-right: 7px;
+    padding: 0;
 }

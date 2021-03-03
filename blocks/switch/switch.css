@@ -12,3 +12,8 @@
 	color: #050505;
 
 }
+
+.switch:focus {
+
+	outline: none;
+}

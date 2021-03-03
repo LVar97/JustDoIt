@@ -1,11 +1,10 @@
-.month-tasks__time {
+.daily-tasks__heading {
 
     font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
     font-size: 14px;
     line-height: 1.21;
     margin: 0;
-    margin-left: 8px;
     padding: 0;
 }

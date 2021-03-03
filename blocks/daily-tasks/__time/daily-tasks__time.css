@@ -1,4 +1,4 @@
-.month-tasks__time {
+.daily-tasks__time {
 
     font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
     font-weight: 500;
@@ -6,6 +6,5 @@
     font-size: 14px;
     line-height: 1.21;
     margin: 0;
-    margin-left: 8px;
     padding: 0;
 }
