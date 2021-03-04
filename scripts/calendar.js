@@ -25,6 +25,7 @@ const todayBtn = document.querySelector('.calendar-controls__todayBtn');
 const currYear = document.querySelector('.calendar-controls__year-title');
 currMonth = document.querySelector('.calendar-controls__month-title');
 
+
 //Инпут выбора цвета
 
 colorInput.onchange = function() {
@@ -77,7 +78,7 @@ function createCalendar(elem, year, month) {
   yearTitle.textContent = year
 
   
-//Выбираем день недели
+  //Выбираем день недели
 
 
   const chooseDayActive = () => {
