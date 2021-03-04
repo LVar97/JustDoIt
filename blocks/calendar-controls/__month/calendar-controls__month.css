@@ -1,0 +1,6 @@
+.calendar-controls__month {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

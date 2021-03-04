@@ -1,4 +1,4 @@
-.calendar__month-title {
+.calendar-controls__year-title {
 
     font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
     font-weight: 700;
@@ -9,9 +9,10 @@
     color: white;
     display: flex;
     align-items: center;
+    margin: 30px 0;
 }
-
-.calendar__month-title::after {
+/*
+.calendar__year-title::after {
 
     content: '';
     display: inline-block;
@@ -22,7 +23,7 @@
     margin: 0 15px;
 }
 
-.calendar__month-title::before {
+.calendar__year-title::before {
 
     content: '';
     display: inline-block;

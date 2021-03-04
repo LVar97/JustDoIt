@@ -18,22 +18,28 @@
         <button class="switch" data-tab="daily">День</button>
       </div>
     </header>
-    <main class=content>
-
+    <main>
       <section class="tab-content tab-content_active" data-tab-content="monthly">
+        <section class="calendar-controls">
+          <div class="calendar-controls__year">
+            <button class="calendar-controls__arrow-left" id="year-left" type="button"></button>
+            <span class="calendar-controls__year-title">Год</span>
+            <button class="calendar-controls__arrow-right" id="year-right" type="button"></button>
+          </div>
+          <div class="calendar-controls__month">
+            <button class="calendar-controls__arrow-left" id="month-left" type="button"></button>
+            <span class="calendar-controls__month-title">Месяц</span>
+            <button class="calendar-controls__arrow-right" id="month-right" type="button"></button>
+          </div>
+          <button class="calendar-controls__todayBtn calendar-controls__todayBtn_active" type="button">Сегодня</button>
+        </section>
+
         <section class="calendar">
         </section>
   
         <section class="month-tasks">
           <h2 class="month-tasks__month-title">Этот месяц</h2>
           <div class="month-tasks__cards-case">
-            <!-- <div class="month-tasks__task-card">
-              <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
-              <p class="month-tasks__heading">Название карточки</p>
-              <p class="month-tasks__data">12 окт</p>
-              <span class="временный спан">&bull;</span>
-              <p class="month-tasks__time">13:00</p>
-            </div>
             <div class="month-tasks__task-card">
               <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
               <p class="month-tasks__heading">Название карточки</p>
@@ -54,7 +60,14 @@
               <p class="month-tasks__data">12 окт</p>
               <span class="временный спан">&bull;</span>
               <p class="month-tasks__time">13:00</p>
-            </div> -->
+            </div>
+            <div class="month-tasks__task-card">
+              <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
+              <p class="month-tasks__heading">Название карточки</p>
+              <p class="month-tasks__data">12 окт</p>
+              <span class="временный спан">&bull;</span>
+              <p class="month-tasks__time">13:00</p>
+            </div>
           </div>
         </section>
       </section>
@@ -97,7 +110,21 @@
           </div>
         </section>
       </section>
-    
+      <!--
+          <main class="content">
+            <section class="notes">
+              <h2 class="notes__title">10 марта</h2>
+              <ul class="notes__list">
+                <li class="card">
+                  <input type="radio" name="tab" id="tab-1" class="card__input">
+                  <label for="tab-1" class="card__label">Покормить кота</label>
+                  <a href="#" class="notes__details">Подробнее</a>
+                  <button type="button" class="button-delete_small"></button>
+                </li>
+              </ul>
+            </section>    
+          </main>
+        -->
       <footer class="footer">
         <button class="button-add"></button>
         <div class="menu">
@@ -116,69 +143,52 @@
         </div>
       </footer>
       
-     
-    </main>
-
-     <!--У всех попапов общий класс popup. Открываем попапы добавлением класса popup_opened-->
-     <div class="popup popup-delete">
-      <div class="popup-delete__container">
-        <h2 class="popup-delete__title"></h2>
-        <div class="popup-delete__info">
-          <p class="popup-delete__info_date"></p>
-          <span class="временный спан">&bull;</span>
-          <p class="popup-delete__info_time"></p>
+      <!--У всех попапов общий класс popup. Открываем попапы добавлением класса popup_opened-->
+      <div class="popup popup-delete">
+        <div class="popup-delete__container">
+          <h2 class="popup-delete__title">Встретить Васю</h2>
+          <div class="popup-delete__info"></div>
+          <p class="popup-delete__note">Приезжает на Ленинский вокзал, 4 платформа. Просил купить ему поесть</p>     
+          <label for="done" class="popup-delete__label">
+            <input id="done" type="checkbox" checked class="popup-delete__input">
+            <span>выполнено</span>
+          </label>
+          <button type="button" class="button-delete">
+            <img src="image/delete-icon.svg" alt="удалить">
+            Удалить
+          </button>
         </div>
-        <p class="popup-delete__note"></p>     
-        <label for="done" class="popup-delete__label">
-          <input id="done" type="checkbox" checked class="popup-delete__input">
-          <span>выполнено</span>
-        </label>
-        <button type="button" class="button-delete">
-          <img src="image/delete-icon.svg" alt="удалить">
-          Удалить
-        </button>
       </div>
-    </div>
 
-    <!--У всех попапов общий класс popup. Открываем попапы добавлением класса popup_opened-->
-    <div class="popup popup-new">
-      <div class="popup-new__container">
-        <h2 class="popup-new__title">Создать новое задание</h2>
-        <form class="popup-new__form">
-          <label class="popup-new__label">Название
-            <input class="popup-new__input" id="input-1" placeholder="Введите название" required>
-          </label>
-          <label class="popup-new__label">Описание
-            <input class="popup-new__input" id="input-2" placeholder="Введите описание" required>
-          </label>      
-          <input class="popup-new__input" type="date" id="input-3" required>
-          <label class="popup-new__label">Уведомить за
-            <select class="popup-new__input" placeholder="Уведомить за 5 мин" required>
-              <option>1 мин</option>
-              <option>5 мин</option>
-              <option>15 мин</option>
-              <option>1 час</option>
-            </select>
-          </label>
-          <label class="popup-new__label">Выбор цвета
-            <input class="popup-new__input popup-new__input_hidden" id="color" type="color" required>
-            <span class="popup-new__color"></span>
-          </label>
-          <button class="popup-new__add-btn" type="submit">Добавить</button>
-        </form>
+      <!--У всех попапов общий класс popup. Открываем попапы добавлением класса popup_opened-->
+      <div class="popup popup-new">
+        <div class="popup-new__container">
+          <h2 class="popup-new__title">Создать новое задание</h2>
+          <form class="popup-new__form">
+            <label class="popup-new__label">Название
+              <input class="popup-new__input" placeholder="Введите название" required>
+            </label>
+            <label class="popup-new__label">Описание
+              <input class="popup-new__input" placeholder="Введите описание" required>
+            </label>      
+            <input class="popup-new__input" type="date" id="" required>
+            <label class="popup-new__label">Уведомить за
+              <select class="popup-new__input" placeholder="Уведомить за 5 мин" required>
+                <option>1 мин</option>
+                <option>5 мин</option>
+                <option>15 мин</option>
+                <option>1 час</option>
+              </select>
+            </label>
+            <label class="popup-new__label">Выбор цвета
+              <input class="popup-new__input popup-new__input_hidden" id="color" type="color" required>
+              <span class="popup-new__color"></span>
+            </label>
+            <button class="popup-new__add-btn" type="submit">Добавить</button>
+          </form>
+        </div>
       </div>
-    </div>
-
-    <template id="card">
-      <div class="month-tasks__task-card">
-        <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
-        <p class="month-tasks__heading"></p>
-        <p class="month-tasks__data"></p>
-        <span class="временный спан">&bull;</span>
-        <p class="month-tasks__time"></p>
-      </div>
-    </template> 
+    </main>
   </div>
-  <script src="./scripts/popups.js"></script>
 </body>
 </html>

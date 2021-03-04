@@ -1,0 +1,12 @@
+.calendar-controls__month-title {
+
+    font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.21;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+}

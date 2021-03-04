@@ -1,0 +1,15 @@
+.calendar-controls__todayBtn {
+
+    background-color: #5B3E96;
+    color: #FFFFFF;
+    width: 130px;
+    min-height: 30px;
+    border-radius: 100px;
+    border: none;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    margin-top: 20px;
+    outline: none;
+}

@@ -17,6 +17,14 @@ const monthNames = [
 const colorInput = document.querySelector('#color');
 const pseudoColor = document.querySelector('.popup-new__color');
 
+const monthRightBtn = document.querySelector('#month-right');
+const monthLeftBtn = document.querySelector('#month-left');
+const yearRightBtn = document.querySelector('#year-right');
+const yearLeftBtn = document.querySelector('#year-left');
+const todayBtn = document.querySelector('.calendar-controls__todayBtn');
+const currYear = document.querySelector('.calendar-controls__year-title');
+currMonth = document.querySelector('.calendar-controls__month-title');
+
 //Инпут выбора цвета
 
 colorInput.onchange = function() {
@@ -27,10 +35,10 @@ colorInput.onchange = function() {
 
 function createCalendar(elem, year, month) {
 
-  let mon = month - 1; // месяцы в JS идут от 0 до 11, а не от 1 до 12
+  let mon = month; // месяцы в JS идут от 0 до 11, а не от 1 до 12
   let d = new Date(year, mon);
 
-  let table = '<span class="calendar__year-title"></span><span class="calendar__month-title"></span><table class="calendar__table"><tr class="calendar__week"><th>пн</th><th>вт</th><th>ср</th><th>чт</th><th>пт</th><th>сб</th><th>вс</th></tr><tr>';
+  let table = '<table class="calendar__table"><tr class="calendar__week"><th>пн</th><th>вт</th><th>ср</th><th>чт</th><th>пт</th><th>сб</th><th>вс</th></tr><tr>';
 
   // пробелы для первого ряда
   // с понедельника до первого дня месяца
@@ -63,10 +71,11 @@ function createCalendar(elem, year, month) {
 
   elem.innerHTML = table;
 
-  monthTitle = elem.querySelector('.calendar__month-title');
+  monthTitle = document.querySelector('.calendar-controls__month-title');
   monthTitle.textContent = monthNames[month]
-  yearTitle = elem.querySelector('.calendar__year-title');
+  yearTitle = document.querySelector('.calendar-controls__year-title');
   yearTitle.textContent = year
+
 }
 
 function getDay(date) { // получить номер дня недели, от 0 (пн) до 6 (вс)
@@ -75,8 +84,59 @@ function getDay(date) { // получить номер дня недели, от
   return day - 1;
 }
 
+createCalendar(calendar, (new Date()).getFullYear(), (new Date()).getMonth());
 
 
-console.log(pseudoColor.style.backgroundColor)
 
-createCalendar(calendar, 2012, 9);
+//Event Listeners
+
+yearRightBtn.addEventListener('click', () => {
+
+  createCalendar(calendar, +currYear.textContent + 1, monthNames.indexOf(currMonth.textContent));
+  changeBtnToday()
+})
+
+yearLeftBtn.addEventListener('click', () => {
+
+  createCalendar(calendar, +currYear.textContent - 1, monthNames.indexOf(currMonth.textContent));
+  changeBtnToday()
+})
+
+monthRightBtn.addEventListener('click', () => {
+
+  createCalendar(calendar, +currYear.textContent, monthNames.indexOf(currMonth.textContent) + 1);
+  changeBtnToday()
+})
+
+monthLeftBtn.addEventListener('click', () => {
+
+  createCalendar(calendar, +currYear.textContent, monthNames.indexOf(currMonth.textContent) - 1);
+  changeBtnToday()
+})
+
+todayBtn.addEventListener('click', () => {
+
+  createCalendar(calendar, (new Date()).getFullYear(), (new Date()).getMonth());
+  changeBtnToday()
+})
+
+
+//Меняем цвет кнопки "Сегодня"
+
+function changeBtnToday() {
+
+  if (+currYear.textContent === new Date().getFullYear() && monthNames.indexOf(currMonth.textContent) === new Date().getMonth()) {
+
+    todayBtn.classList.add('calendar-controls__todayBtn_active');
+    //todayBtn.disabled = false;
+    console.log('true')
+  
+  } else {
+  
+    todayBtn.classList.remove('calendar-controls__todayBtn_active');
+    console.log('false')
+    //todayBtn.disabled = true;
+  }
+}
+
+//changeBtnToday()

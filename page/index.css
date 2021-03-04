@@ -32,14 +32,25 @@
 @import url(../blocks/tab-content/_active/tab-content_active.css);
 
 
+/*Calendar-controls*/
+
+@import url(../blocks/calendar-controls/calendar-controls.css);
+@import url(../blocks/calendar-controls/__month-title/calendar-controls__month-title.css);
+@import url(../blocks/calendar-controls/__year-title/calendar-controls__year-title.css);
+@import url(../blocks/calendar-controls/__year/calendar-controls__year.css);
+@import url(../blocks/calendar-controls/__month/calendar-controls__month.css);
+@import url(../blocks/calendar-controls/__arrow-left/calendar-controls__arrow-left.css);
+@import url(../blocks/calendar-controls/__arrow-right/calendar-controls__arrow-right.css);
+@import url(../blocks/calendar-controls/__todayBtn/calendar-controls__todayBtn.css);
+@import url(../blocks/calendar-controls/__todayBtn/_active/calendar-controls__todayBtn_active.css);
+
+
 /*Calendar*/
 
 @import url(../blocks/calendar/calendar.css);
 @import url(../blocks/calendar/__table/calendar__table.css);
 @import url(../blocks/calendar/__week/calendar__week.css);
 @import url(../blocks/calendar/__day/calendar__day.css);
-@import url(../blocks/calendar/__year-title/calendar__year-title.css);
-@import url(../blocks/calendar/__month-title/calendar__month-title.css);
 
 
 /*Month-tasks*/
