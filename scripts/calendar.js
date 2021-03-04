@@ -35,7 +35,7 @@ colorInput.onchange = function() {
 
 function createCalendar(elem, year, month) {
 
-  let mon = month; // месяцы в JS идут от 0 до 11, а не от 1 до 12
+  let mon = month;
   let d = new Date(year, mon);
 
   let table = '<table class="calendar__table"><tr class="calendar__week"><th>пн</th><th>вт</th><th>ср</th><th>чт</th><th>пт</th><th>сб</th><th>вс</th></tr><tr>';
@@ -76,6 +76,42 @@ function createCalendar(elem, year, month) {
   yearTitle = document.querySelector('.calendar-controls__year-title');
   yearTitle.textContent = year
 
+  
+//Выбираем день недели
+
+
+  const chooseDayActive = () => {
+    
+    const allDays = Array.from(calendar.querySelectorAll('.calendar__day'));
+
+    const removeDayActive = () => {
+
+      allDays.forEach((evt) => {
+
+        evt.classList.remove('calendar__day_active')
+      })
+    }
+
+    allDays.forEach((evt) => {
+        
+        evt.addEventListener('click', (evt) => {
+
+        if (evt.target.classList.contains('calendar__day_active')) {
+      
+          evt.target.classList.remove('calendar__day_active');
+
+        } else {
+
+        removeDayActive();
+
+        evt.target.classList.add('calendar__day_active');
+
+        }
+      })
+    })
+  }
+  
+  chooseDayActive();
 }
 
 function getDay(date) { // получить номер дня недели, от 0 (пн) до 6 (вс)
@@ -128,15 +164,10 @@ function changeBtnToday() {
   if (+currYear.textContent === new Date().getFullYear() && monthNames.indexOf(currMonth.textContent) === new Date().getMonth()) {
 
     todayBtn.classList.add('calendar-controls__todayBtn_active');
-    //todayBtn.disabled = false;
-    console.log('true')
   
   } else {
   
     todayBtn.classList.remove('calendar-controls__todayBtn_active');
-    console.log('false')
-    //todayBtn.disabled = true;
   }
 }
 
-//changeBtnToday()

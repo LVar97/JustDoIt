@@ -1,0 +1,5 @@
+.calendar__day_active {
+
+    border-radius: 50%;
+    background-color: blue;
+}
