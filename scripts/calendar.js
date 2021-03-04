@@ -23,10 +23,12 @@ const yearRightBtn = document.querySelector('#year-right');
 const yearLeftBtn = document.querySelector('#year-left');
 const todayBtn = document.querySelector('.calendar-controls__todayBtn');
 const currYear = document.querySelector('.calendar-controls__year-title');
-currMonth = document.querySelector('.calendar-controls__month-title');
+const currMonth = document.querySelector('.calendar-controls__month-title');
+const taskMonthTitle = document.querySelector('.month-tasks__month-title');
 
 
 //Инпут выбора цвета
+pseudoColor.style.backgroundColor = colorInput.value;
 
 colorInput.onchange = function() {
 
@@ -113,6 +115,7 @@ function createCalendar(elem, year, month) {
   }
   
   chooseDayActive();
+  taskMonthTitle.textContent = monthNames[month]
 }
 
 function getDay(date) { // получить номер дня недели, от 0 (пн) до 6 (вс)

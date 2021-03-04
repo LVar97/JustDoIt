@@ -6,6 +6,7 @@
 /*Vendor*/
 
 @import url(../vendor/normalize.css);
+@import url(../vendor/animation.css);
 
 /* root & content */
 
@@ -64,6 +65,9 @@
 @import url(../blocks/month-tasks/__data/month-tasks__data.css);
 @import url(../blocks/month-tasks/__time/month-tasks__time.css);
 @import url(../blocks/month-tasks/__cards-case/month-tasks__cards-case.css);
+@import url(../blocks/month-tasks/__empty/month-tasks__empty.css);
+@import url(../blocks/month-tasks/__empty/_active/month-tasks__empty_active.css);
+@import url(../blocks/month-tasks/__month/month-tasks__month.css);
 
 
 /*Daily-tasks*/
@@ -85,6 +89,7 @@
 @import url('../blocks/menu/menu.css');
 @import url('../blocks/menu/__icons/menu__icons.css');
 @import url('../blocks/menu/__img/menu__img.css');
+@import url(../blocks/button-add/_animated/button-add_animated.css);
 
 /*Popup*/
 
