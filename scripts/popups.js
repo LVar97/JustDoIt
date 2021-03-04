@@ -13,22 +13,22 @@ const initialCards = [
 	{
 		task: 'Сдать работу',
 		note: '',
-		date: '07.03.2023',
+		date: '2021-03-08',
 		time: '21:00',
 		// color: 'red',
 	},
 	{
 		task: 'Покормить кота соседа',
 		note: 'корм стоит на 3 полке, справа от чайника',
-		date: '14.03.2012',
+		date: '2012-03-14',
 		time: '13:00',
 		// color: 'green',
 	},
 	{
 		task: 'Выпить пива',
 		note: 'А то че, работу сдали - можно и отдохнуть',
-		date: '08.03.2021',
-		time: '9:00',
+		date: '2021-03-08',
+		time: '09:00',
 		// color: 'green',
 	},
 ]
@@ -101,7 +101,18 @@ const timeInput = document.querySelector('#input-4');
 popupNew.addEventListener('submit', function (evt) {
   evt.preventDefault(); 
 
+	initialCards.push({
+		task: taskInput.value,
+		note: noteInput.value,
+		date: dateInput.value,
+		time: timeInput,
+		// color: 'red',
+	},)
+
+	// arraySorted = initialCards.sort((a, b) => (a.date > b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1 );
+	// console.log(arraySorted)
   cardCase.prepend(createCard(taskInput.value,  noteInput.value, dateInput.value, timeInput));
+	// reRender(arraySorted);
   closePopup(popupNew);
 
   // disabledBtnSubmit();
@@ -112,6 +123,18 @@ popupNew.addEventListener('submit', function (evt) {
 	// timeInput.value = '';
 
 });
+
+// function reRender(array){
+// 	cardCase.remove();
+// 	console.log(cardCase);
+// 	array.forEach(function (element) {
+
+// 		cardCase.append(createCard( element.task, element.date, element.time, element.note));
+		
+// 	});
+// 	console.log(cardCase);
+// }
+
 
 // функция активной/неактивной кнопки - надо даделать
 const btnSubmit = popupNew.querySelector('.popup-new__add-btn');
