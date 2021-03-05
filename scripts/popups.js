@@ -6,7 +6,9 @@ const noteDeletePopup = document.querySelector('.popup-delete__note');
 const dateDeletePopup = document.querySelector('.popup-delete__info_date');
 const timeDeletePopup = document.querySelector('.popup-delete__info_time');
 const cardCase = document.querySelector('.month-tasks__cards-case');
+const cardCaseDaily = document.querySelector('.daily-tasks__cards-case');
 const cardTemplate = document.querySelector('#card').content;
+const cardDailyTemplate = document.querySelector('#card-daily').content;
 const btnSubmit = popupNew.querySelector('.popup-new__add-btn');
 
 
@@ -31,6 +33,7 @@ const deleteEmptySpan = () => {
 // оскрытие попапов
 
 function showPopup(popup){
+
   popup.classList.add('popup_opened');
 }
 
@@ -48,6 +51,14 @@ function clickOverlay (evt, popup){
   if (evt.target.classList.contains('popup')) {
     closePopup(popup);
   } 
+}
+
+
+// функция удаления
+
+function removeCard(el){
+	
+	el.remove();
 }
 
 
@@ -82,24 +93,21 @@ const showCardsToUser = (arr) => {
 		taskCard.querySelector('.month-tasks__data').textContent = `${arr[i].day} ${monthNames[arr[i].month]}`;
 		taskCard.querySelector('.month-tasks__time').textContent = `${arr[i].hour}:${arr[i].minutes}`;
 		cardCase.append(taskCard);
-		console.log(arr[i].hour, arr[i].minutes)
 	}
 }
 
 
 // Вставляем карточки на 3 экран День, предварительно удаляя старые
 
-const showCardsToUser = (arr) => {
+const showCardsToUserDaily = (arr) => {
 
-	cardCase.innerHTML = ''
+	cardCaseDaily.innerHTML = ''
 	for(i = 0; i < arr.length; i++) {
 		
-		const taskCard = cardTemplate.cloneNode(true);
-		taskCard.querySelector('.month-tasks__heading').textContent = arr[i].task;
-		taskCard.querySelector('.month-tasks__data').textContent = `${arr[i].day} ${monthNames[arr[i].month]}`;
-		taskCard.querySelector('.month-tasks__time').textContent = `${arr[i].hour}:${arr[i].minutes}`;
-		cardCase.append(taskCard);
-		console.log(arr[i].hour, arr[i].minutes)
+		const taskDayCard = cardDailyTemplate.cloneNode(true);
+		taskDayCard.querySelector('.daily-tasks__heading').textContent = arr[i].task;
+		taskDayCard.querySelector('.daily-tasks__time').textContent = `${arr[i].hour}:${arr[i].minutes}`;
+		cardCaseDaily.append(taskDayCard);
 	}
 }
 
@@ -109,7 +117,9 @@ function disabledBtnSubmit() {
   btnSubmit.setAttribute('disabled', true);
   btnSubmit.classList.add('popup-new__add-btn_disabled');
 }
-// 
+
+
+// Event Listeners
 
 addButton.addEventListener('click', () => {showPopup(popupNew)});
 popupDelete.addEventListener('click', (evt) => {clickOverlay(evt, popupDelete)});
@@ -119,6 +129,7 @@ popupNew.addEventListener('click', (evt) => {clickOverlay(evt, popupNew)});
 // Подтверждаем в попапе создание Таска, добавляем карточку
 // в массив, выводим карточки в консоль, закрываем попап.
 
+
 popupNew.addEventListener('submit', function (evt) {
 	evt.preventDefault();
 
@@ -126,9 +137,12 @@ popupNew.addEventListener('submit', function (evt) {
 
 	showCardsToUser(taskCardsArray);
 
+	showCardsToUserDaily(taskCardsArray);
+
 	deleteEmptySpan();
 
 	closePopup(popupNew);
+	
 })
 
 

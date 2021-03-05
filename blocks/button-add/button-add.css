@@ -8,6 +8,7 @@
 	border-radius: 50%;
 	border: none;
 	box-shadow: 0px 20px 30px rgba(91, 62, 150, 0.4);
+	outline: none;
 
 	display: flex;
 	flex-direction: column;
