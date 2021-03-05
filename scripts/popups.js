@@ -119,18 +119,11 @@ function disabledBtnSubmit() {
 }
 
 
-// Event Listeners
-
-addButton.addEventListener('click', () => {showPopup(popupNew)});
-popupDelete.addEventListener('click', (evt) => {clickOverlay(evt, popupDelete)});
-popupNew.addEventListener('click', (evt) => {clickOverlay(evt, popupNew)});
-
-
 // Подтверждаем в попапе создание Таска, добавляем карточку
 // в массив, выводим карточки в консоль, закрываем попап.
 
-
 popupNew.addEventListener('submit', function (evt) {
+
 	evt.preventDefault();
 
 	createNewArrObject();
@@ -146,8 +139,13 @@ popupNew.addEventListener('submit', function (evt) {
 })
 
 
+// Event Listeners
 
+addButton.addEventListener('click', () => {showPopup(popupNew)});
+popupDelete.addEventListener('click', (evt) => {clickOverlay(evt, popupDelete)});
+popupNew.addEventListener('click', (evt) => {clickOverlay(evt, popupNew)});
 
+console.log()
 
 
 
