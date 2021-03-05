@@ -80,8 +80,17 @@ function createCalendar(elem, year, month) {
   yearTitle.textContent = year
 
   
-  //Выбираем день недели
+  //Писваиваем каждому дню айдишник
+  
+  const allDays = Array.from(calendar.querySelectorAll('.calendar__day'));
+  
+  for(i=0; i < allDays.length; i++) {
+    
+    allDays[i].setAttribute('id',i + 1)
+  }
 
+
+  //Выбираем день недели
 
   const chooseDayActive = () => {
     
@@ -89,9 +98,9 @@ function createCalendar(elem, year, month) {
 
     const removeDayActive = () => {
 
-      allDays.forEach((evt) => {
-
-        evt.classList.remove('calendar__day_active')
+      allDays.forEach((item) => {
+        
+        item.classList.remove('calendar__day_active')
       })
     }
 
