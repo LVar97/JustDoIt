@@ -5,12 +5,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./page/index.css">
-	<script src="./scripts/calendar.js" defer></script>
-  <script src="./scripts/monthly-daily.js" defer></script>
   <script src="./scripts/popups.js" defer></script>
+  <script src="./scripts/calendar.js" defer></script>
+  <script src="./scripts/monthly-daily.js" defer></script>
 	<title>JustDoIt</title>
 </head>
 <body>
+  <button class="test-button">ghjk</button>
 	<div class="root">
     <header class="header">
       <div alt="logo" class="header__logo"></div>
@@ -75,7 +76,7 @@
       </section>
       <section class="tab-content" data-tab-content="daily" >  
         <section class="daily-tasks">
-          <h2 class="daily-tasks__title">4 Марта 2001</h2>
+          <h2 class="daily-tasks__title"></h2>
           <div class="daily-tasks__cards-case"></div>
         </section>
       </section>
@@ -131,11 +132,11 @@
             <input class="popup-new__input" id="input-1" placeholder="Введите название" required>
           </label>
           <label class="popup-new__label">Описание
-            <input class="popup-new__input" id="input-2" placeholder="Введите описание" required>
+            <input class="popup-new__input" id="input-2" placeholder="Введите описание">
           </label>      
           <input class="popup-new__input" type="datetime-local" id="input-3" required>
           <label class="popup-new__label">Уведомить за
-            <select class="popup-new__input" id="input-4" placeholder="Уведомить за 5 мин" required>
+            <select class="popup-new__input" id="input-4" placeholder="Уведомить за 5 мин">
               <option value="60000" selected>1 мин</option>
               <option value="300000">5 мин</option>
               <option value="900000">15 мин</option>
@@ -152,7 +153,7 @@
     </div>
 
     <template id="card">
-      <div class="month-tasks__task-card">
+      <div class="month-tasks__task-card" id="month-tasks">
         <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
         <p class="month-tasks__heading"></p>
         <p class="month-tasks__data"></p>
@@ -161,7 +162,7 @@
       </div>
     </template>
     <template id="card-daily">
-      <div class="daily-tasks__task-card">
+      <div class="daily-tasks__task-card" id="daily-tasks">
         <p class="daily-tasks__heading"></p>
         <p class="daily-tasks__time"></p>
       </div>
