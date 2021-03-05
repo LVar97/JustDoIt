@@ -1,12 +1,12 @@
 /*Fonts*/
 
-@import url(../fonts/raleway/raleway.css);
+@import url('../fonts/raleway/raleway.css');
 
 
 /*Vendor*/
 
-@import url(../vendor/normalize.css);
-@import url(../vendor/animation.css);
+@import url('../vendor/normalize.css');
+@import url('../vendor/animation.css');
 
 /* root & content */
 
@@ -15,72 +15,72 @@
 
 /*Root*/
 
-@import url(../blocks/root/root.css);
+@import url('../blocks/root/root.css');
 
 
 /*Header*/
 
-@import url(../blocks/header/header.css);
-@import url(../blocks/header/__logo/header__logo.css);
-@import url(../blocks/header/__btn/header__btn.css);
-@import url(../blocks/switch/switch.css);
-@import url(../blocks/switch/_active/switch_active.css);
+@import url('../blocks/header/header.css');
+@import url('../blocks/header/__logo/header__logo.css');
+@import url('../blocks/header/__btn/header__btn.css');
+@import url('../blocks/switch/switch.css');
+@import url('../blocks/switch/_active/switch_active.css');
 
 
 /*Tab-content*/
 
-@import url(../blocks/tab-content/tab-content.css);
-@import url(../blocks/tab-content/_active/tab-content_active.css);
+@import url('../blocks/tab-content/tab-content.css');
+@import url('../blocks/tab-content/_active/tab-content_active.css');
 
 
 /*Calendar-controls*/
 
-@import url(../blocks/calendar-controls/calendar-controls.css);
-@import url(../blocks/calendar-controls/__month-title/calendar-controls__month-title.css);
-@import url(../blocks/calendar-controls/__year-title/calendar-controls__year-title.css);
-@import url(../blocks/calendar-controls/__year/calendar-controls__year.css);
-@import url(../blocks/calendar-controls/__month/calendar-controls__month.css);
-@import url(../blocks/calendar-controls/__arrow-left/calendar-controls__arrow-left.css);
-@import url(../blocks/calendar-controls/__arrow-right/calendar-controls__arrow-right.css);
-@import url(../blocks/calendar-controls/__todayBtn/calendar-controls__todayBtn.css);
-@import url(../blocks/calendar-controls/__todayBtn/_active/calendar-controls__todayBtn_active.css);
+@import url('../blocks/calendar-controls/calendar-controls.css');
+@import url('../blocks/calendar-controls/__month-title/calendar-controls__month-title.css');
+@import url('../blocks/calendar-controls/__year-title/calendar-controls__year-title.css');
+@import url('../blocks/calendar-controls/__year/calendar-controls__year.css');
+@import url('../blocks/calendar-controls/__month/calendar-controls__month.css');
+@import url('../blocks/calendar-controls/__arrow-left/calendar-controls__arrow-left.css');
+@import url('../blocks/calendar-controls/__arrow-right/calendar-controls__arrow-right.css');
+@import url('../blocks/calendar-controls/__todayBtn/calendar-controls__todayBtn.css');
+@import url('../blocks/calendar-controls/__todayBtn/_active/calendar-controls__todayBtn_active.css');
 
 
 /*Calendar*/
 
-@import url(../blocks/calendar/calendar.css);
-@import url(../blocks/calendar/__table/calendar__table.css);
-@import url(../blocks/calendar/__week/calendar__week.css);
-@import url(../blocks/calendar/__day/calendar__day.css);
-@import url(../blocks/calendar/__day/_active/calendar__day_active.css);
-@import url(../blocks/calendar/__day/_tasked/calendar__day_tasked.css);
+@import url('../blocks/calendar/calendar.css');
+@import url('../blocks/calendar/__table/calendar__table.css');
+@import url('../blocks/calendar/__week/calendar__week.css');
+@import url('../blocks/calendar/__day/calendar__day.css');
+@import url('../blocks/calendar/__day/_active/calendar__day_active.css');
+@import url('../blocks/calendar/__day/_tasked/calendar__day_tasked.css');
 
 
 /*Month-tasks*/
 
-@import url(../blocks/month-tasks/month-tasks.css);
-@import url(../blocks/month-tasks/__month-title/month-tasks__month-title.css);
-@import url(../blocks/month-tasks/__task-card/month-tasks__task-card.css);
-@import url(../blocks/month-tasks/__heading/month-tasks__heading.css);
-@import url(../blocks/month-tasks/__done-icon/month-tasks__done-icon.css);
-@import url(../blocks/month-tasks/__data/month-tasks__data.css);
-@import url(../blocks/month-tasks/__time/month-tasks__time.css);
-@import url(../blocks/month-tasks/__cards-case/month-tasks__cards-case.css);
-@import url(../blocks/month-tasks/__empty/month-tasks__empty.css);
-@import url(../blocks/month-tasks/__empty/_active/month-tasks__empty_active.css);
-@import url(../blocks/month-tasks/__month/month-tasks__month.css);
+@import url('../blocks/month-tasks/month-tasks.css');
+@import url('../blocks/month-tasks/__month-title/month-tasks__month-title.css');
+@import url('../blocks/month-tasks/__task-card/month-tasks__task-card.css');
+@import url('../blocks/month-tasks/__heading/month-tasks__heading.css');
+@import url('../blocks/month-tasks/__done-icon/month-tasks__done-icon.css');
+@import url('../blocks/month-tasks/__data/month-tasks__data.css');
+@import url('../blocks/month-tasks/__time/month-tasks__time.css');
+@import url('../blocks/month-tasks/__cards-case/month-tasks__cards-case.css');
+@import url('../blocks/month-tasks/__empty/month-tasks__empty.css');
+@import url('../blocks/month-tasks/__empty/_active/month-tasks__empty_active.css');
+@import url('../blocks/month-tasks/__month/month-tasks__month.css');
 
 
 /*Daily-tasks*/
 
-@import url(../blocks/daily-tasks/daily-tasks.css);
-@import url(../blocks/daily-tasks/__cards-case/daily-tasks__cards-case.css);
-@import url(../blocks/daily-tasks/__done-icon/daily-tasks__done-icon.css);
-@import url(../blocks/daily-tasks/__heading/daily-tasks__heading.css);
-@import url(../blocks/daily-tasks/__task-card/daily-tasks__task-card.css);
-@import url(../blocks/daily-tasks/__time/daily-tasks__time.css);
-@import url(../blocks/daily-tasks/__title/daily-tasks__title.css);
-@import url(../blocks/daily-tasks/__task-card/_done/daily-tasks__task-card_done.css);
+@import url('../blocks/daily-tasks/daily-tasks.css');
+@import url('../blocks/daily-tasks/__cards-case/daily-tasks__cards-case.css');
+@import url('../blocks/daily-tasks/__done-icon/daily-tasks__done-icon.css');
+@import url('../blocks/daily-tasks/__heading/daily-tasks__heading.css');
+@import url('../blocks/daily-tasks/__task-card/daily-tasks__task-card.css');
+@import url('../blocks/daily-tasks/__time/daily-tasks__time.css');
+@import url('../blocks/daily-tasks/__title/daily-tasks__title.css');
+@import url('../blocks/daily-tasks/__task-card/_done/daily-tasks__task-card_done.css');
 
 
 /*Footer*/
@@ -90,7 +90,7 @@
 @import url('../blocks/menu/menu.css');
 @import url('../blocks/menu/__icons/menu__icons.css');
 @import url('../blocks/menu/__img/menu__img.css');
-@import url(../blocks/button-add/_animated/button-add_animated.css);
+@import url('../blocks/button-add/_animated/button-add_animated.css');
 
 /*Popup*/
 
@@ -100,30 +100,30 @@
 
 /*Popup-delete*/
 
-@import url(../blocks/popup-delete/popup-delete.css);
-@import url(../blocks/popup-delete/__container/popup-delete__container.css);
-@import url(../blocks/popup-delete/__title/popup-delete__title.css);
-@import url(../blocks/popup-delete/__note/popup-delete__note.css);
-@import url(../blocks/popup-delete/__info/popup-delete__info.css);
+@import url('../blocks/popup-delete/popup-delete.css');
+@import url('../blocks/popup-delete/__container/popup-delete__container.css');
+@import url('../blocks/popup-delete/__title/popup-delete__title.css');
+@import url('../blocks/popup-delete/__note/popup-delete__note.css');
+@import url('../blocks/popup-delete/__info/popup-delete__info.css');
 @import url('../blocks/popup-delete/__info/_date/popup-delete__info_date.css');
 @import url('../blocks/popup-delete/__info/_time/popup-delete__info_time.css');
-@import url(../blocks/popup-delete/__input/popup-delete__input.css);
-@import url(../blocks/popup-delete/__label/popup-delete__label.css);
+@import url('../blocks/popup-delete/__input/popup-delete__input.css');
+@import url('../blocks/popup-delete/__label/popup-delete__label.css');
 
 @import url('../blocks/button-delete/button-delete.css');
 
 
 /*Popup-new*/
 
-@import url(../blocks/popup-new/popup-new.css);
-@import url(../blocks/popup-new/__container/popup-new__container.css);
-@import url(../blocks/popup-new/__input/popup-new__input.css);
-@import url(../blocks/popup-new/__label/popup-new__label.css);
-@import url(../blocks/popup-new/__title/popup-new__title.css);
-@import url(../blocks/popup-new/__form/popup-new__form.css);
-@import url(../blocks/popup-new/__add-btn/popup-new__add-btn.css);
+@import url('../blocks/popup-new/popup-new.css');
+@import url('../blocks/popup-new/__container/popup-new__container.css');
+@import url('../blocks/popup-new/__input/popup-new__input.css');
+@import url('../blocks/popup-new/__label/popup-new__label.css');
+@import url('../blocks/popup-new/__title/popup-new__title.css');
+@import url('../blocks/popup-new/__form/popup-new__form.css');
+@import url('../blocks/popup-new/__add-btn/popup-new__add-btn.css');
 @import url('../blocks/popup-new/__add-btn/_disabled/popup-new__add-btn_disabled.css');
-@import url(../blocks/popup-new/__color/popup-new__color.css);
-@import url(../blocks/popup-new/__input/_hidden/popup-new__input_hidden.css);
+@import url('../blocks/popup-new/__color/popup-new__color.css');
+@import url('../blocks/popup-new/__input/_hidden/popup-new__input_hidden.css');
 
 @import url('');
