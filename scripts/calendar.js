@@ -91,13 +91,17 @@ const chooseDayActive = () => {
 
     evt.addEventListener('click', (evt) => {
       
+      console.log('hi')
       if (evt.target.classList.contains('calendar__day_active')) {
         
-        evt.target.classList.remove('calendar__day_active');
+        
+        renderCardsToSecondScreen();
+        
       } else {
 
         removeDayActive();
         evt.target.classList.add('calendar__day_active');
+        renderCardsToSecondScreen();
       }
     })
   })
