@@ -123,7 +123,7 @@ function createCalendar(elem, year, month) {
         evt.classList.add('calendar__day_active');
       }
       // подсветка дня в котором есть задачи
-      for (let i = 0; i < taskCardsArray.length; i++){
+      for (let i = 0; i < taskCardsArray.length; i++) {
         if (evt.textContent === taskCardsArray[i].date.toString() && month === taskCardsArray[i].month && year === taskCardsArray[i].year){
 
           evt.classList.add('calendar__day_tasked');
@@ -136,7 +136,6 @@ function createCalendar(elem, year, month) {
         if (evt.target.classList.contains('calendar__day_active')) {
       
           evt.target.classList.remove('calendar__day_active');
-
 
         } else {
 
@@ -179,13 +178,17 @@ yearLeftBtn.addEventListener('click', () => {
 
 monthRightBtn.addEventListener('click', () => {
 
-  createCalendar(calendar, +currYear.textContent, monthNames.indexOf(currMonth.textContent) + 1);
+  let monthInx = monthNames.indexOf(currMonth.textContent)
+  if (monthInx == 11) monthInx = -1
+  createCalendar(calendar, +currYear.textContent, monthInx + 1);
   changeBtnToday()
 })
 
 monthLeftBtn.addEventListener('click', () => {
 
-  createCalendar(calendar, +currYear.textContent, monthNames.indexOf(currMonth.textContent) - 1);
+  let monthInx = monthNames.indexOf(currMonth.textContent)
+  if (monthInx == 0) monthInx = 12
+  createCalendar(calendar, +currYear.textContent, monthInx - 1);
   changeBtnToday()
 })
 
