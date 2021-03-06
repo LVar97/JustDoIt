@@ -43,7 +43,7 @@ const deleteEmptySpan = () => {
 }
 
 
-// оскрытие попапов
+// Открытие попапов
 
 function showPopup(popup){
 
@@ -51,14 +51,14 @@ function showPopup(popup){
 }
 
 
-// закрытие
+// Закрытие
 
 function closePopup (popup) {
   popup.classList.remove('popup_opened');
 }
 
 
-// закрытие по оверлею 
+// Закрытие по оверлею 
 function clickOverlay (evt, popup){
   if (evt.target.classList.contains('popup')) {
     closePopup(popup);
@@ -69,8 +69,12 @@ function clickOverlay (evt, popup){
 
 
 
-// функция удаления. сравнивает значения task и удаляет карточку из массива из которого рендериться чтобы карточки не задваивались. карточки удаляются сразу отовсюду
-function removeCard(el, string){
+// функция удаления. сравнивает значения task и удаляет карточку 
+//из массива из которого рендериться, чтобы карточки не задваивались. 
+//Карточки удаляются сразу отовсюду
+
+function removeCard(el, string) {
+
 	for (i=0; i < taskCardsArray.length; i++) {
 		
 		if (taskCardsArray[i].task === el.querySelector(`.${string}__heading`).textContent){
@@ -96,25 +100,29 @@ const createNewArrObject = () => {
 	newObj.time = new Date(document.querySelector('#input-3').value).getTime();
 	newObj.hour = new Date(document.querySelector('#input-3').value).getHours();
 	newObj.minutes = new Date(document.querySelector('#input-3').value).getMinutes();
-	//newObj.alert = document.querySelector('#input-4').value;
 	newObj.color = colorInput.value;
+
 	taskCardsArray.push(newObj);
 }
 
 // функция сортирует карточки по дням и времени
-function sortByDateTime(arr){
+
+function sortByDateTime(arr) {
+	
 	arr.sort((a, b) => (a.date > b.date) ? 1 : (a.date === b.date) ? ((a.time > b.time) ? 1 : -1) : -1 );
 	return arr
 }
 
 // фукция копии карточки - не удалять
+
 function cloneTemplate(el, string){
   return el.querySelector(`.${string}__task-card`).cloneNode(true);
 }
 
-// Эта функция воспринимает в себя элемент массива и для каждого элемента отрисовывает карточку.
+// Эта функция принимает в себя элемент массива и для каждого элемента отрисовывает карточку.
 // Функция универсальна - отрисовывает карточки сразу на два экрана
-const renderCardsToUser = (el, string, template) => {
+
+const renderCardsToFirstScreen = (el, string, template) => {
 	
 	const taskCard = cloneTemplate(template, string);
 	
@@ -165,8 +173,8 @@ const renderCardsToUser = (el, string, template) => {
 			});
 		}
 	});
+
 	return taskCard;
-	
 }
 
 // функция активной/неактивной кнопки - надо даделать
@@ -201,11 +209,11 @@ function reRender() {
 	dailyTasks = sortByDate(toDay.textContent, taskCardsArray);
 
 	dailyTasks.forEach((el) => {
-		cardCaseDaily.append(renderCardsToUser(el, 'daily-tasks', cardDailyTemplate));
+		cardCaseDaily.append(renderCardsToFirstScreen(el, 'daily-tasks', cardDailyTemplate));
 	});
 
 	taskCardsArray.forEach((el) => {
-		cardCase.append(renderCardsToUser(el, 'month-tasks', cardTemplate));
+		cardCase.append(renderCardsToFirstScreen(el, 'month-tasks', cardTemplate));
 	});
 
 	createCalendar(calendar, (new Date()).getFullYear(), (new Date()).getMonth());
@@ -274,7 +282,7 @@ newArrByDate()
 // ВНИМАНИЕ! ЭТА ФУНКЦИЯ НЕ НУЖНА - ТАК КАК ДУБЛИРУЕТ ФУНКЦИОНАЛ ДРУГОЙ
 
 // Вставляем карточки на 3 экран День, предварительно удаляя старые
-// const renderCardsToUserDaily = (arr) => {
+// const renderCardsToFirstScreenDaily = (arr) => {
 // 	const taskDayCard = cloneDailyCardTemplate(cardDailyTemplate);
 // 	for(i = 0; i < arr.length; i++) {
 // 		taskDayCard.querySelector('.daily-tasks__heading').textContent = arr[i].task;
