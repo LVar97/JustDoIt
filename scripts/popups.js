@@ -95,7 +95,7 @@ const createNewArrObject = () => {
 	newObj.time = new Date(document.querySelector('#input-3').value).getTime();
 	newObj.hour = new Date(document.querySelector('#input-3').value).getHours();
 	newObj.minutes = new Date(document.querySelector('#input-3').value).getMinutes();
-	newObj.alert = document.querySelector('#input-4').value;
+	//newObj.alert = document.querySelector('#input-4').value;
 	newObj.color = colorInput.value;
 	taskCardsArray.push(newObj);
 }
@@ -123,7 +123,8 @@ const renderCardsToUser = (el, string, template) => {
 		taskCard.querySelector(`.${string}__data`).textContent = `${el.date} ${monthNames[el.month]}`;
 
 	}
-	cardCase.append(taskCard);
+	//cardCase.append(taskCard);
+	//cardCaseDaily.append(taskCard);
 
 	
 	taskCard.addEventListener('click', function() {
@@ -157,23 +158,24 @@ function clearInputs(taskEl,  noteEl, dateEl, timeEl){
 	taskEl.value = ''; 
 	noteEl.value = '';
 	dateEl.value = '';
-	timeEl.value = '';
+	//timeEl.value = '';
 }
 
+
+
 // Функция сравнивает значение отмеченного дня в календаре с днем в карточке и отрисовывает на втором экране только карточки выбранного дня - они сразу отсортированы по времени
-function reRender(){
+function reRender() {
 	const toDay = document.querySelector('.calendar__day_active');
 	// const currentMonth = document.querySelector('.calendar-controls__month-title');
 	
 	cardCase.innerHTML = '';
 	cardCaseDaily.innerHTML = '';
 	sortByDateTime(taskCardsArray);
-
-	let dailyTasks = [];
+	
 	// let monthTasks = [];
 	// monthTasks = sortByMounth(currentMonth.textContent, taskCardsArray);
 	
-	dailyTasks = sortByDate( toDay.textContent, taskCardsArray);
+	dailyTasks = sortByDate(toDay.textContent, taskCardsArray);
 
 	dailyTasks.forEach((el) => {
 		cardCaseDaily.append(renderCardsToUser(el, 'daily-tasks', cardDailyTemplate));
@@ -236,7 +238,16 @@ popupDelete.addEventListener('click', (evt) => {clickOverlay(evt, popupDelete)})
 popupNew.addEventListener('click', (evt) => {clickOverlay(evt, popupNew)});
 
 
+/*
+//Функция создания нового массива по выбранной дате
 
+function newArrByDate () {
+
+	const toDay = document.querySelector('.calendar__day_active');
+	console.log(toDay)
+}
+newArrByDate()
+*/
 // ВНИМАНИЕ! ЭТА ФУНКЦИЯ НЕ НУЖНА - ТАК КАК ДУБЛИРУЕТ ФУНКЦИОНАЛ ДРУГОЙ
 
 // Вставляем карточки на 3 экран День, предварительно удаляя старые
