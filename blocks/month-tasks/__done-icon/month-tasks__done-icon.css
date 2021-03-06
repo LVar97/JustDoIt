@@ -1,5 +1,11 @@
 .month-tasks__done-icon {
-
+    background-image: url('../../../image/done-icon.svg');
     width: 16px;
+    height: 16px;
     margin: 0 6px 0 9px;
+    z-index: 3;
+}
+
+.month-tasks__done-icon:hover{
+    
 }

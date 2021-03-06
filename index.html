@@ -109,10 +109,11 @@
           <p class="popup-delete__info_time"></p>
         </div>
         <p class="popup-delete__note"></p>     
-        <label for="done" class="popup-delete__label">
-          <input id="done" type="checkbox" checked class="popup-delete__input">
-          <span>выполнено</span>
-        </label>
+        <div for="done" class="popup-delete__label">
+          <div class="popup__done-icon">
+          </div>
+          <p class="popup-delete__span">не выполнено</p>
+        </div>
         <button type="button" class="button-delete">
           <img src="image/delete-icon.svg" alt="удалить">
           Удалить
@@ -134,14 +135,6 @@
             <input class="popup-new__input" id="input-2" placeholder="Введите описание">
           </label>      
           <input class="popup-new__input" type="datetime-local" id="input-3" required>
-          <!--<label class="popup-new__label">Уведомить за
-            <select class="popup-new__input" id="input-4" placeholder="Уведомить за 5 мин">
-              <option value="60000" selected>1 мин</option>
-              <option value="300000">5 мин</option>
-              <option value="900000">15 мин</option>
-              <option value="3600000">1 час</option>
-            </select>
-          </label>-->
           <label class="popup-new__label">Выбор цвета
             <input class="popup-new__input popup-new__input_hidden" id="color" type="color" required>
             <span class="popup-new__color"></span>
@@ -153,7 +146,7 @@
 
     <template id="card">
       <div class="month-tasks__task-card" id="month-tasks">
-        <img src="./image/done-icon.svg" alt="done-icon" class="month-tasks__done-icon">
+        <div class="month-tasks__done-icon"></div>
         <p class="month-tasks__heading"></p>
         <p class="month-tasks__data"></p>
         <span class="временный спан">&bull;</span>
@@ -162,6 +155,7 @@
     </template>
     <template id="card-daily">
       <div class="daily-tasks__task-card" id="daily-tasks">
+        <div class="month-tasks__done-icon"></div>
         <p class="daily-tasks__heading"></p>
         <p class="daily-tasks__time"></p>
       </div>

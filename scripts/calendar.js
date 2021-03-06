@@ -125,7 +125,7 @@ function createCalendar(elem, year, month) {
       // подсветка дня в котором есть задачи
       for (let i = 0; i < taskCardsArray.length; i++) {
         if (evt.textContent === taskCardsArray[i].date.toString() && month === taskCardsArray[i].month && year === taskCardsArray[i].year){
-
+          
           evt.classList.add('calendar__day_tasked');
         }
 

@@ -1,5 +1,5 @@
 .month-tasks__task-card {
-
+    padding: 5px;
     background-color: white;
     display: flex;
     align-items: center;

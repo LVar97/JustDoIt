@@ -1,0 +1,4 @@
+.month-tasks__done-icon_active{
+	background-image: url('../../../../image/checked.svg');
+	background-repeat: no-repeat;
+}

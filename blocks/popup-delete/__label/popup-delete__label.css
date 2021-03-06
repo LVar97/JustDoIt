@@ -1,5 +1,5 @@
 .popup-delete__label {
 
-    display: block;
+  display: flex;
 	padding-left: 20px;
 }

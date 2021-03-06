@@ -68,6 +68,7 @@ function clickOverlay (evt, popup){
 }
 
 
+
 // функция удаления. сравнивает значения task и удаляет карточку из массива из которого рендериться чтобы карточки не задваивались. карточки удаляются сразу отовсюду
 function removeCard(el, string){
 	for (i=0; i < taskCardsArray.length; i++) {
@@ -123,24 +124,46 @@ const renderCardsToUser = (el, string, template) => {
 		taskCard.querySelector(`.${string}__data`).textContent = `${el.date} ${monthNames[el.month]}`;
 
 	}
-	//cardCase.append(taskCard);
-	//cardCaseDaily.append(taskCard);
+	cardCase.append(taskCard);
+	cardCaseDaily.append(taskCard);
 
-	
-	taskCard.addEventListener('click', function() {
-		
-		titleDeletePopup.textContent = el.task;
-		noteDeletePopup.textContent = el.note;
-		dateDeletePopup.textContent = `${el.date} ${monthNames[el.month]}`;
-		timeDeletePopup.textContent = `${el.hour}:${el.minutes}`;
-		
-		// удаление карточки
-		popupDelete.querySelector('.button-delete').addEventListener('click', (evt) => {
-			evt.preventDefault(); 
-			closePopup(popupDelete);
-			removeCard(taskCard, string);
-		});
-		showPopup(popupDelete);
+
+	taskCard.addEventListener('click', function(evt) {
+		// условие для чекеда карточки
+		if (evt.target.classList.contains(`${string}__done-icon`)) {
+
+			evt.target.classList.toggle(`${string}__done-icon_active`);
+		} else {
+
+			titleDeletePopup.textContent = el.task;
+			noteDeletePopup.textContent = el.note;
+			dateDeletePopup.textContent = `${el.date} ${monthNames[el.month]}`;
+			timeDeletePopup.textContent = `${el.hour}:${el.minutes}`;
+
+			// удаление карточки
+			popupDelete.querySelector('.button-delete').addEventListener('click', (evt) => {
+				evt.preventDefault(); 
+				closePopup(popupDelete);
+				removeCard(taskCard, string);
+			});
+			showPopup(popupDelete);
+
+			// чекед попапа
+			const spanCheked = popupDelete.querySelector('.popup-delete__span');
+
+			popupDelete.querySelector('.popup__done-icon').addEventListener('click', (evt) => {
+
+				evt.target.classList.toggle(`${string}__done-icon_active`);
+
+				if (evt.target.classList.contains(`${string}__done-icon_active`)) {
+					spanCheked.textContent = 'выполнено';
+					titleDeletePopup.classList.add('popup-delete__title_done');
+				} else{
+					spanCheked.textContent = 'не выполнено';
+					titleDeletePopup.classList.remove('popup-delete__title_done');
+				}
+			});
+		}
 	});
 	return taskCard;
 	
