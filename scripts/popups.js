@@ -156,7 +156,7 @@ const renderCardsToUser = (el, string, template) => {
 				evt.target.classList.toggle(`${string}__done-icon_active`);
 
 				if (evt.target.classList.contains(`${string}__done-icon_active`)) {
-					spanCheked.textContent = 'выполнено';
+					popupDelete.querySelector('.popup-delete__span').textContent = 'выполнено';
 					titleDeletePopup.classList.add('popup-delete__title_done');
 				} else{
 					spanCheked.textContent = 'не выполнено';
