@@ -8,12 +8,14 @@
   <script src="./scripts/popups.js" defer></script>
   <script src="./scripts/calendar.js" defer></script>
   <script src="./scripts/monthly-daily.js" defer></script>
+  <script src="./scripts/footer.js" defer></script>
 	<title>JustDoIt</title>
 </head>
 <body>
 	<div class="root">
     <header class="header">
-      <div alt="logo" class="header__logo"></div>
+      <!--<div alt="logo" class="header__logo"></div>-->
+      <h1 class="header__title">Задачи на</h1>
       <div class="header__btn">
         <button class="switch switch_active" data-tab="monthly">Месяц</button>
         <button class="switch" data-tab="daily">День</button>
@@ -85,14 +87,16 @@
       <button class="button-add button-add_animated"></button>
       <div class="menu">
         <a class="menu__icons">
-          <img src="image/List-icons.svg" alt="#" class="menu__img">
+          <img src="image/List-icons.svg" alt="#" id="list-button" class="menu__img">
         </a>
+        <!--
         <a class="menu__icons">
-          <img src="image/clock-icons.svg" alt="#" class="menu__img">
+        <img src="image/clock-icons.svg" alt="#" class="menu__img">
         </a>
         <a href="#" lass="menu__icons">
           <img src="image/Bell-icons.svg" alt="#" class="menu__img">
         </a>
+        -->
         <a href="#" lass="menu__icons">
           <img src="image/User-icons.svg" alt="#" class="menu__img">
         </a>
@@ -146,6 +150,14 @@
         </form>
       </div>
     </div>
+
+    <div class="popup popup-list">
+      <div class="popup-list__container">
+        <h2 class="popup-list__title">Все созданные задания</h2>
+        <div class="popup-list__container-mini" id="list-container"></div>
+      </div>
+    </div>
+
 
     <template id="card">
       <div class="month-tasks__task-card" id="month-tasks">

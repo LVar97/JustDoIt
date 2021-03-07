@@ -21,6 +21,7 @@
 /*Header*/
 
 @import url('../blocks/header/header.css');
+@import url('../blocks/header/__title/header__title.css');
 @import url('../blocks/header/__logo/header__logo.css');
 @import url('../blocks/header/__btn/header__btn.css');
 @import url('../blocks/switch/switch.css');
@@ -115,7 +116,6 @@
 @import url('../blocks/popup-delete/__info/_time/popup-delete__info_time.css');
 @import url('../blocks/popup-delete/__label/popup-delete__label.css');
 @import url('../blocks/popup-delete/__span/popup-delete__span.css');
-
 @import url('../blocks/button-delete/button-delete.css');
 
 
@@ -132,4 +132,11 @@
 @import url('../blocks/popup-new/__color/popup-new__color.css');
 @import url('../blocks/popup-new/__input/_hidden/popup-new__input_hidden.css');
 
+
+/*Popup-list*/
+
+@import url('../blocks/popup-list/popup-list.css');
+@import url('../blocks/popup-list/__title/popup-list__title.css');
+@import url('../blocks/popup-list/__container/popup-list__container.css');
+@import url('');
 @import url('');
