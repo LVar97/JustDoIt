@@ -27,18 +27,124 @@ const todayBtn = document.querySelector('.calendar-controls__todayBtn');
 const currYear = document.querySelector('.calendar-controls__year-title');
 const currMonth = document.querySelector('.calendar-controls__month-title');
 const taskMonthTitle = document.querySelector('.month-tasks__month-title');
-
-
+const monthTitle = document.querySelector('.calendar-controls__month-title');
+const monthTitleDaily = document.querySelector('.daily-tasks__title');
+const yearTitle = document.querySelector('.calendar-controls__year-title');
 
 
 //Инпут выбора цвета
+/*
 pseudoColor.style.backgroundColor = colorInput.value;
 
 colorInput.onchange = function() {
 
   pseudoColor.style.backgroundColor = colorInput.value;
 }
+*/
 
+//Писваиваем каждому дню айдишник
+
+function idGivingToDays() {
+  
+  const allDays = Array.from(calendar.querySelectorAll('.calendar__day'));
+
+  for(i=0; i < allDays.length; i++) {
+    
+    allDays[i].setAttribute('id',i + 1)
+  }
+}
+
+//Выбираем день недели
+
+const chooseDayActive = () => {
+  
+  const allDays = Array.from(calendar.querySelectorAll('.calendar__day'));
+
+  const removeDayActive = () => {
+
+    allDays.forEach((item) => {
+      
+      item.classList.remove('calendar__day_active')
+    })
+  }
+
+  allDays.forEach((evt) => {
+
+    // условие нужно для подсветки сегодняшнего дня при загрузки страницы
+
+    if ((new Date()).getDate().toString() === evt.textContent && monthTitle.textContent === monthNames[(new Date()).getMonth()] && yearTitle.textContent === (new Date()).getFullYear().toString() ){
+
+      evt.classList.add('calendar__day_active');
+    }
+
+    // подсветка дня в котором есть задачи
+
+    function lightenTaskedDay() {
+
+      //console.log(monthNames.indexOf(monthTitle.textContent));
+
+      for (let i = 0; i < taskCardsArray.length; i++) {
+        if (evt.textContent === taskCardsArray[i].date.toString() && monthNames.indexOf(monthTitle.textContent) === taskCardsArray[i].month && new Date().getFullYear() === taskCardsArray[i].year) {
+        //Проверки
+        /*  
+        console.log(evt.textContent);
+        console.log(taskCardsArray[i].date.toString());
+        console.log('Devider');
+        console.log(monthNames.indexOf(monthTitle.textContent));
+        console.log(taskCardsArray[i].month);
+        console.log('Devider');
+        console.log(new Date().getFullYear());
+        console.log(taskCardsArray[i].year);
+        */
+          evt.classList.add('calendar__day_tasked');
+        }
+      }
+    }
+
+    lightenTaskedDay()
+
+    evt.addEventListener('click', (evt) => {
+      
+      if (evt.target.classList.contains('calendar__day_tasked')) {
+        
+        document.querySelector('.daily-tasks__empty').classList.remove('daily-tasks__empty_active');
+               
+      } else {
+
+        document.querySelector('.daily-tasks__empty').classList.add('daily-tasks__empty_active');
+        
+      }
+
+      if (evt.target.classList.contains('calendar__day_active')) {
+        
+        renderCardsToSecondScreen();
+        
+      } else {
+
+        removeDayActive();
+        evt.target.classList.add('calendar__day_active');
+        renderCardsToSecondScreen();
+      }
+    })
+  })
+}
+
+
+//Заполняем имена блоков
+
+const givingNamestoBlocks = (month, year) => {
+
+  monthTitle.textContent = monthNames[month];
+  monthTitleDaily.textContent = `${monthNames[month]} ${year}`;
+  yearTitle.textContent = year;
+  taskMonthTitle.textContent = 'Всего заданий'
+}
+
+function getDay(date) { // получить номер дня недели, от 0 (пн) до 6 (вс)
+  let day = date.getDay();
+  if (day == 0) day = 7; // сделать воскресенье (0) последним днем
+  return day - 1;
+}
 
 function createCalendar(elem, year, month) {
 
@@ -65,8 +171,6 @@ function createCalendar(elem, year, month) {
     }
 
     d.setDate(d.getDate() + 1);
-
-    
   }
 
   // добить таблицу пустыми ячейками, если нужно
@@ -82,80 +186,9 @@ function createCalendar(elem, year, month) {
 
   elem.innerHTML = table;
 
-  monthTitle = document.querySelector('.calendar-controls__month-title');
-  monthTitleDaily = document.querySelector('.daily-tasks__title');
-  // dayTitle = document.querySelector('.calendar__day_active');
-  // dayTitle.textContent = day;
-  monthTitle.textContent = monthNames[month];
-  monthTitleDaily.textContent = `${monthNames[month]} ${year}`;
-  yearTitle = document.querySelector('.calendar-controls__year-title');
-  yearTitle.textContent = year;
-
-  
-  //Писваиваем каждому дню айдишник
-  
-  const allDays = Array.from(calendar.querySelectorAll('.calendar__day'));
-  
-  for(i=0; i < allDays.length; i++) {
-    
-    allDays[i].setAttribute('id',i + 1)
-  }
-
-
-  //Выбираем день недели
-
-  const chooseDayActive = () => {
-    
-    const allDays = Array.from(calendar.querySelectorAll('.calendar__day'));
-
-    const removeDayActive = () => {
-
-      allDays.forEach((item) => {
-        
-        item.classList.remove('calendar__day_active')
-      })
-    }
-
-    allDays.forEach((evt) => {
-
-      // условие нужно для подсветки сегодняшнего дня при загрузки страницы
-      if ((new Date()).getDate().toString() === evt.textContent && monthTitle.textContent === monthNames[(new Date()).getMonth()] && yearTitle.textContent ===  (new Date()).getFullYear().toString() ){
-        evt.classList.add('calendar__day_active');
-      }
-      // подсветка дня в котором есть задачи
-      for (let i = 0; i < taskCardsArray.length; i++) {
-        if (evt.textContent === taskCardsArray[i].date.toString() && month === taskCardsArray[i].month && year === taskCardsArray[i].year){
-          
-          evt.classList.add('calendar__day_tasked');
-        }
-
-      }
-      
-      evt.addEventListener('click', (evt) => {
-        
-        if (evt.target.classList.contains('calendar__day_active')) {
-      
-          evt.target.classList.remove('calendar__day_active');
-
-        } else {
-
-          removeDayActive();
-
-          evt.target.classList.add('calendar__day_active');
-
-        }
-      })
-    })
-  }
-  
+  givingNamestoBlocks(month, year);
   chooseDayActive();
-  taskMonthTitle.textContent = monthNames[month]
-}
-
-function getDay(date) { // получить номер дня недели, от 0 (пн) до 6 (вс)
-  let day = date.getDay();
-  if (day == 0) day = 7; // сделать воскресенье (0) последним днем
-  return day - 1;
+  idGivingToDays();
 }
 
 createCalendar(calendar, (new Date()).getFullYear(), (new Date()).getMonth());
@@ -177,7 +210,7 @@ yearLeftBtn.addEventListener('click', () => {
 })
 
 monthRightBtn.addEventListener('click', () => {
-
+  
   let monthInx = monthNames.indexOf(currMonth.textContent)
   if (monthInx == 11) monthInx = -1
   createCalendar(calendar, +currYear.textContent, monthInx + 1);
