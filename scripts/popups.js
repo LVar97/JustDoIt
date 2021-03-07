@@ -100,6 +100,19 @@ function removeCard(el, string) {
 	renderCardsToSecondScreen();
 }
 
+function removeCardSecondScreen(el) {
+
+	for (i=0; i < taskCardsArray.length; i++) {
+		
+		if (taskCardsArray[i].task === document.querySelector('.daily-tasks__heading').textContent) {
+			
+			taskCardsArray.splice(i, 1);
+		}
+	}
+
+	renderCardsToFirstScreen();
+	renderCardsToSecondScreen();
+}
 
 // Создаем новый объект в массив карточек
 
@@ -144,8 +157,7 @@ function cloneTemplate(el, string){
   return el.querySelector(`.${string}__task-card`).cloneNode(true);
 }
 
-// Эта функция принимает в себя элемент массива и для каждого элемента отрисовывает карточку.
-// Функция универсальна - отрисовывает карточки сразу на два экрана
+// Готовим карточку для первого экрана
 
 const preparingCardsToFirstScreen = (el, string, template) => {
 	
@@ -225,10 +237,11 @@ function renderCardsToFirstScreen() {
 	cardCaseDaily.innerHTML = '';
 
 	sortByDateTime(taskCardsArray);
-	
-	dailyTasks = sortByDate(toDay.textContent, taskCardsArray);
+
+	//dailyTasks = sortByDate(toDay.textContent, taskCardsArray);
 
 	taskCardsArray.forEach((el) => {
+		
 		cardCase.append(preparingCardsToFirstScreen(el, 'month-tasks', cardTemplate));
 	});
 
@@ -245,9 +258,9 @@ function renderCardsToSecondScreen() {
 	cardCaseDaily.innerHTML = '';
 
 	newArr.forEach((el) => {
-
+			
 		const taskCard = cardDailyTemplate.querySelector('.daily-tasks__task-card').cloneNode(true);
-	
+
 		taskCard.querySelector('.daily-tasks__heading').textContent = el.task;
 		taskCard.querySelector('.daily-tasks__time').textContent = `${el.hour}:${el.minutes}`;
 
@@ -259,34 +272,34 @@ function renderCardsToSecondScreen() {
 				evt.target.classList.toggle('daily-tasks__done-icon_active');
 			} else {
 
-					titleDeletePopup.textContent = el.task;
-					noteDeletePopup.textContent = el.note;
-					dateDeletePopup.textContent = `${el.date} ${monthNames[el.month]}`;
-					timeDeletePopup.textContent = `${el.hour}:${el.minutes}`;
+				titleDeletePopup.textContent = el.task;
+				noteDeletePopup.textContent = el.note;
+				dateDeletePopup.textContent = `${el.date} ${monthNames[el.month]}`;
+				timeDeletePopup.textContent = `${el.hour}:${el.minutes}`;
 
-					// удаление карточки
-					popupDelete.querySelector('.button-delete').addEventListener('click', (evt) => {
-						evt.preventDefault(); 
-						closePopup(popupDelete);
-						removeCard(taskCard, string);
-					});
+				// удаление карточки
+				popupDelete.querySelector('.button-delete').addEventListener('click', (evt) => {
+					evt.preventDefault(); 
+					closePopup(popupDelete);
+					removeCardSecondScreen(el)
+				});
 
-					showPopup(popupDelete);
+				showPopup(popupDelete);
 
-					// чекед попапа
-					const spanCheked = popupDelete.querySelector('.popup-delete__span');
+				// чекед попапа
+				const spanCheked = popupDelete.querySelector('.popup-delete__span');
 
-					popupDelete.querySelector('.popup__done-icon').addEventListener('click', (evt) => {
+				popupDelete.querySelector('.popup__done-icon').addEventListener('click', (evt) => {
 
-						evt.target.classList.toggle('daily-tasks__done-icon_active');
+					evt.target.classList.toggle('daily-tasks__done-icon_active');
 
-						if (evt.target.classList.contains('daily-tasks__done-icon_active')) {
-							popupDelete.querySelector('.popup-delete__span').textContent = 'выполнено';
-							titleDeletePopup.classList.add('popup-delete__title_done');
-						} else{
-							spanCheked.textContent = 'не выполнено';
-							titleDeletePopup.classList.remove('popup-delete__title_done');
-						}
+					if (evt.target.classList.contains('daily-tasks__done-icon_active')) {
+						popupDelete.querySelector('.popup-delete__span').textContent = 'выполнено';
+						titleDeletePopup.classList.add('popup-delete__title_done');
+					} else{
+						spanCheked.textContent = 'не выполнено';
+						titleDeletePopup.classList.remove('popup-delete__title_done');
+					}
 				});
 			}	
 		});

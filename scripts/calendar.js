@@ -81,7 +81,7 @@ const chooseDayActive = () => {
 
     function lightenTaskedDay() {
 
-      console.log(monthNames.indexOf(monthTitle.textContent));
+      //console.log(monthNames.indexOf(monthTitle.textContent));
 
       for (let i = 0; i < taskCardsArray.length; i++) {
         if (evt.textContent === taskCardsArray[i].date.toString() && monthNames.indexOf(monthTitle.textContent) === taskCardsArray[i].month && new Date().getFullYear() === taskCardsArray[i].year) {
@@ -137,7 +137,7 @@ const givingNamestoBlocks = (month, year) => {
   monthTitle.textContent = monthNames[month];
   monthTitleDaily.textContent = `${monthNames[month]} ${year}`;
   yearTitle.textContent = year;
-  taskMonthTitle.textContent = monthNames[month]
+  taskMonthTitle.textContent = 'Всего заданий'
 }
 
 function getDay(date) { // получить номер дня недели, от 0 (пн) до 6 (вс)
@@ -210,7 +210,7 @@ yearLeftBtn.addEventListener('click', () => {
 })
 
 monthRightBtn.addEventListener('click', () => {
-
+  
   let monthInx = monthNames.indexOf(currMonth.textContent)
   if (monthInx == 11) monthInx = -1
   createCalendar(calendar, +currYear.textContent, monthInx + 1);
