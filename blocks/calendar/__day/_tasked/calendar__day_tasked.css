@@ -1,5 +1,7 @@
 .calendar__day_tasked {
+    /* border-radius: 50%;
+    border: 1px solid white; */
     border-radius: 50%;
-    border: 1px solid white;
-    
+    border-bottom: 2px solid;
+    border-bottom-color: #00ffd0
 }

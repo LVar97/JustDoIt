@@ -97,22 +97,22 @@ function removeCard(el, string) {
 	}
 
 	renderCardsToFirstScreen();
-	renderCardsToSecondScreen();
+	// renderCardsToSecondScreen();
 }
 
-function removeCardSecondScreen(el) {
+// function removeCardSecondScreen(el) {
 
-	for (i=0; i < taskCardsArray.length; i++) {
+// 	for (i=0; i < taskCardsArray.length; i++) {
 		
-		if (taskCardsArray[i].task === document.querySelector('.daily-tasks__heading').textContent) {
+// 		if (taskCardsArray[i].task === document.querySelector(`.${string}__heading`).textContent) {
 			
-			taskCardsArray.splice(i, 1);
-		}
-	}
+// 			taskCardsArray.splice(i, 1);
+// 		}
+// 	}
 
-	renderCardsToFirstScreen();
-	renderCardsToSecondScreen();
-}
+// 	renderCardsToFirstScreen();
+// 	renderCardsToSecondScreen();
+// }
 
 // Создаем новый объект в массив карточек
 
@@ -238,7 +238,13 @@ function renderCardsToFirstScreen() {
 
 	sortByDateTime(taskCardsArray);
 
-	//dailyTasks = sortByDate(toDay.textContent, taskCardsArray);
+	dailyTasks = sortByDate(toDay.textContent, taskCardsArray);
+
+	dailyTasks.forEach((el) => {
+		
+		cardCase.append(preparingCardsToFirstScreen(el, 'daily-tasks', cardTemplate));
+	});
+
 
 	taskCardsArray.forEach((el) => {
 		
@@ -281,7 +287,8 @@ function renderCardsToSecondScreen() {
 				popupDelete.querySelector('.button-delete').addEventListener('click', (evt) => {
 					evt.preventDefault(); 
 					closePopup(popupDelete);
-					removeCardSecondScreen(el)
+					removeCard(taskCard, string);
+					
 				});
 
 				showPopup(popupDelete);
@@ -336,7 +343,7 @@ popupNew.addEventListener('submit', function (evt) {
 	
 	clearInputs(taskInput,  noteInput, dateInput);
 
-	renderCardsToSecondScreen();
+	// renderCardsToSecondScreen();
 	
 })
 
