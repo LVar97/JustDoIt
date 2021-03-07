@@ -76,6 +76,7 @@
       <section class="tab-content" data-tab-content="daily" >  
         <section class="daily-tasks">
           <h2 class="daily-tasks__title"></h2>
+          <p class="daily-tasks__empty daily-tasks__empty_active">Нет задач в выбранный Вами день</p>
           <div class="daily-tasks__cards-case"></div>
         </section>
       </section>
@@ -135,10 +136,12 @@
             <input class="popup-new__input" id="input-2" placeholder="Введите описание">
           </label>      
           <input class="popup-new__input" type="datetime-local" id="input-3" required>
+          <!--
           <label class="popup-new__label">Выбор цвета
             <input class="popup-new__input popup-new__input_hidden" id="color" type="color" required>
             <span class="popup-new__color"></span>
           </label>
+          -->
           <button class="popup-new__add-btn" type="submit">Добавить</button>
         </form>
       </div>

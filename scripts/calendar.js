@@ -33,13 +33,14 @@ const yearTitle = document.querySelector('.calendar-controls__year-title');
 
 
 //Инпут выбора цвета
+/*
 pseudoColor.style.backgroundColor = colorInput.value;
 
 colorInput.onchange = function() {
 
   pseudoColor.style.backgroundColor = colorInput.value;
 }
-
+*/
 
 //Писваиваем каждому дню айдишник
 
@@ -91,9 +92,17 @@ const chooseDayActive = () => {
 
     evt.addEventListener('click', (evt) => {
       
-      console.log('hi')
-      if (evt.target.classList.contains('calendar__day_active')) {
+      if (evt.target.classList.contains('calendar__day_tasked')) {
         
+        document.querySelector('.daily-tasks__empty').classList.remove('daily-tasks__empty_active');
+               
+      } else {
+
+        document.querySelector('.daily-tasks__empty').classList.add('daily-tasks__empty_active');
+        
+      }
+
+      if (evt.target.classList.contains('calendar__day_active')) {
         
         renderCardsToSecondScreen();
         

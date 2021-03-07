@@ -114,7 +114,7 @@ const createNewArrObject = () => {
 	newObj.time = new Date(document.querySelector('#input-3').value).getTime();
 	newObj.hour = new Date(document.querySelector('#input-3').value).getHours();
 	newObj.minutes = new Date(document.querySelector('#input-3').value).getMinutes();
-	newObj.color = colorInput.value;
+	//newObj.color = colorInput.value;
 
 	taskCardsArray.push(newObj);
 }
@@ -208,9 +208,6 @@ const preparingCardsToSecondScreen = () => {
 	for (i=0; i < taskCardsArray.length; i++) {
 		if (taskCardsArray[i].date.toString() === ligthenDay.textContent){
 			newArr.push(taskCardsArray[i]);		
-		} else {
-			
-			console.log('hi again')
 		}
 	}
 	
@@ -293,7 +290,7 @@ function renderCardsToSecondScreen() {
 				});
 			}	
 		});
-
+		
 		cardCaseDaily.append(taskCard);
 	});
 };

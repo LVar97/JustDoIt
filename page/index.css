@@ -84,6 +84,8 @@
 @import url('../blocks/daily-tasks/__time/daily-tasks__time.css');
 @import url('../blocks/daily-tasks/__title/daily-tasks__title.css');
 @import url('../blocks/daily-tasks/__task-card/_done/daily-tasks__task-card_done.css');
+@import url('../blocks/daily-tasks/__empty/daily-tasks__empty.css');
+@import url('../blocks/daily-tasks/__empty/_active/daily-tasks__empty_active.css');
 
 
 /*Footer*/

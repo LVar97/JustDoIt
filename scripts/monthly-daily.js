@@ -5,6 +5,19 @@ for (let i = 0; i < tabNavs.length; i++) {
 
   tabNavs[i].addEventListener("click", function(evt){
     evt.preventDefault();
+
+    const activeDay = document.querySelector('.calendar__day_active')
+
+    if (activeDay.classList.contains('calendar__day_tasked')) {
+        
+      document.querySelector('.daily-tasks__empty').classList.remove('daily-tasks__empty_active');
+             
+    } else {
+
+      document.querySelector('.daily-tasks__empty').classList.add('daily-tasks__empty_active');
+      
+    }
+
     const activeTabAttr = evt.target.getAttribute("data-tab");
 
     for (let j = 0; j < tabNavs.length; j++) {
