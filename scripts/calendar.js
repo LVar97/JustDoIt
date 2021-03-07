@@ -72,17 +72,30 @@ const chooseDayActive = () => {
 
     // условие нужно для подсветки сегодняшнего дня при загрузки страницы
 
-    if ((new Date()).getDate().toString() === evt.textContent && monthTitle.textContent === monthNames[(new Date()).getMonth()] && yearTitle.textContent ===  (new Date()).getFullYear().toString() ){
+    if ((new Date()).getDate().toString() === evt.textContent && monthTitle.textContent === monthNames[(new Date()).getMonth()] && yearTitle.textContent === (new Date()).getFullYear().toString() ){
+
       evt.classList.add('calendar__day_active');
     }
 
     // подсветка дня в котором есть задачи
 
     function lightenTaskedDay() {
-        
+
+      console.log(monthNames.indexOf(monthTitle.textContent));
+
       for (let i = 0; i < taskCardsArray.length; i++) {
-        if (evt.textContent === taskCardsArray[i].date.toString() && new Date().getMonth() === taskCardsArray[i].month && new Date().getFullYear() === taskCardsArray[i].year) {
-          
+        if (evt.textContent === taskCardsArray[i].date.toString() && monthNames.indexOf(monthTitle.textContent) === taskCardsArray[i].month && new Date().getFullYear() === taskCardsArray[i].year) {
+        //Проверки
+        /*  
+        console.log(evt.textContent);
+        console.log(taskCardsArray[i].date.toString());
+        console.log('Devider');
+        console.log(monthNames.indexOf(monthTitle.textContent));
+        console.log(taskCardsArray[i].month);
+        console.log('Devider');
+        console.log(new Date().getFullYear());
+        console.log(taskCardsArray[i].year);
+        */
           evt.classList.add('calendar__day_tasked');
         }
       }
